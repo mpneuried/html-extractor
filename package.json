@@ -1,0 +1,44 @@
+{
+  "name": "html-extractor",
+  "description": "Extract meta-data from a html string. It extracts the body, title, meta-tags and first headlines to a object to push them to a search indexer like elastic-search",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mpneuried/html-extractor",
+  "keywords": [
+    "html", "parse", "extract", "body", "search", "tool", "elasic"
+  ],
+  "author": {
+    "name": "Mathias Peter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mpneuried/html-extractor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mpneuried/html-extractor/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/mpneuried/html-extractor/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "./lib/html_extractor.js",
+  "engines": {
+    "node": ">= 0.8.10"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "htmlparser2": "*",
+    "lodash": "*"
+  },
+  "devDependencies": {
+    "should": "*",
+    "request": "*",
+    "grunt-regarde": "*",
+    "grunt-contrib-coffee": "0.5.0",
+    "grunt-mocha-cli": "*",
+    "grunt": "~0.4.0"
+  }
+}

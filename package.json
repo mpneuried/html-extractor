@@ -1,7 +1,7 @@
 {
   "name": "html-extractor",
   "description": "Extract meta-data from a html string. It extracts the body, title, meta-tags and first headlines to a object to push them to a search indexer like elastic-search",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/mpneuried/html-extractor",
   "keywords": [
     "html", "parse", "extract", "body", "search", "tool", "elasic"

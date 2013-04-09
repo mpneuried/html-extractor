@@ -19,10 +19,6 @@ module.exports = class HTMLExtractor
 			i--
 		str
 
-	_indexOf: ( inp, test, offset )=>
-		return inp.toLowerCase().indexOf( test.toLowerCase(), offset )
-
-
 	extract: =>
 
 		[ args..., cb ] = arguments

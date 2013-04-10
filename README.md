@@ -44,12 +44,12 @@ Call `.extract()` to get the data of an html string
 The html string to process
 - **reduced** : *( `Object` optional )*  
 A object to reduce the content of body to a specific site content. It is not possible to reduce to a tag without a attribute filter.
-- **reduced.tag** : *( `String` required if `reduced` is set )*  
-The tag name of the html element to reduce to
-- **reduced.attr** : *( `String` required if `reduced` is set )*  
-The attribute of the html element to reduce to
-- **reduced.val** : *( `String` required if `reduced` is set )*  
-The attribute value of the html element to reduce to
+	- **reduced.tag** : *( `String` required if `reduced` is set )*  
+	The tag name of the html element to reduce to
+	- **reduced.attr** : *( `String` required if `reduced` is set )*  
+	The attribute of the html element to reduce to
+	- **reduced.val** : *( `String` required if `reduced` is set )*  
+	The attribute value of the html element to reduce to
 - **cb** : *( `Function` required )*  
 The callback function
 
@@ -59,20 +59,20 @@ The callback function
 Error information. If no error occoured this will be `null`
 - **data** : *( `Object` )*  
 The extraction result
-- **data.body** : *( `String` )*  
-The whole body content or the content within the configured reduced element. There will be just the text content without html tags/attributes and without the content in script tags.
-- **data.h1** : *( `Array` )*  
-An array containing all `h1` text contents. Including the `h1`elements outside the configured reduced element 
-- **data.meta** : *( `Object` )*  
-A Object of all found meta tags with the syntax `<meta content="" name="">`. Other meta tags will be ignored.
-- **data.meta.charset** : *( `Object` optional )*  
-If a metatag with the charset setting like `<meta charset="utf-8" >` is defined it will be returned under `data.meta.charset`
-- **data.meta.title** : *( `Object` default = `""` )*  
-If tilte tag is defined it will be returned under `data.meta.title`. Otherwise the key will contain an empty string
-- **data.meta.description** : *( `Object` default = `""` )*  
-If a metatag with the name `description` is defined it will be returned under `data.meta.description`. Otherwise the key will contain an empty string
-- **data.meta.keywords** : *( `Array` default = `[]` )*  
-If a metatag with the name `keywords` is defined it will be returned as trimmed array of strings under `data.meta.keywords`. Otherwise the key will contain an empty string
+	- **data.body** : *( `String` )*  
+	The whole body content or the content within the configured reduced element. There will be just the text content without html tags/attributes and without the content in script tags.
+	- **data.h1** : *( `Array` )*  
+	An array containing all `h1` text contents. Including the `h1`elements outside the configured reduced element 
+	- **data.meta** : *( `Object` )*  
+	A Object of all found meta tags with the syntax `<meta content="" name="">`. Other meta tags will be ignored.
+		- **data.meta.charset** : *( `Object` optional )*  
+		If a metatag with the charset setting like `<meta charset="utf-8" >` is defined it will be returned under `data.meta.charset`
+		- **data.meta.title** : *( `Object` default = `""` )*  
+		If tilte tag is defined it will be returned under `data.meta.title`. Otherwise the key will contain an empty string
+		- **data.meta.description** : *( `Object` default = `""` )*  
+		If a metatag with the name `description` is defined it will be returned under `data.meta.description`. Otherwise the key will contain an empty string
+		- **data.meta.keywords** : *( `Array` default = `[]` )*  
+		If a metatag with the name `keywords` is defined it will be returned as trimmed array of strings under `data.meta.keywords`. Otherwise the key will contain an empty string
 
 ## Examples
 

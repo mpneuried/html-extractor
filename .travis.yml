@@ -4,5 +4,3 @@ node_js:
 before_script:
   - "sudo pip install pygments"
   - "npm install -g grunt-cli"
-  - "npm install -g mocha"
-  - "npm install grunt-mocha-cli --save-dev"

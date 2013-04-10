@@ -65,11 +65,11 @@ The extraction result
 	An array containing all `h1` text contents. Including the `h1`elements outside the configured reduced element 
 	- **data.meta** : *( `Object` )*  
 	A Object of all found meta tags with the syntax `<meta content="" name="">`. Other meta tags will be ignored.
-		- **data.meta.charset** : *( `Object` optional )*  
+		- **data.meta.charset** : *( `String` optional )*  
 		If a metatag with the charset setting like `<meta charset="utf-8" >` is defined it will be returned under `data.meta.charset`
-		- **data.meta.title** : *( `Object` default = `""` )*  
+		- **data.meta.title** : *( `String` default = `""` )*  
 		If tilte tag is defined it will be returned under `data.meta.title`. Otherwise the key will contain an empty string
-		- **data.meta.description** : *( `Object` default = `""` )*  
+		- **data.meta.description** : *( `String` default = `""` )*  
 		If a metatag with the name `description` is defined it will be returned under `data.meta.description`. Otherwise the key will contain an empty string
 		- **data.meta.keywords** : *( `Array` default = `[]` )*  
 		If a metatag with the name `keywords` is defined it will be returned as trimmed array of strings under `data.meta.keywords`. Otherwise the key will contain an empty string

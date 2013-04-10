@@ -22,7 +22,7 @@ myExtrator.extract html, ( err, data )->
 		# 	meta: {
 		# 		title: 'Testpage',
 		#		description: '',
-		#		keywords: [ 'A', 'B', 'C' ]
+		#		keywords: []
 		#	},
 		#	body: ' Header 1 Content ',
 		#	h1: [ 'Header 1' ]

@@ -38,6 +38,8 @@
           data.meta.title.should.equal("TCS: Team Centric Software GmbH &amp; Co. KG");
           should.exist(data.body);
           data.body.should.not.be.empty;
+          data.body.should.not.include("$('#contactform')");
+          data.body.should.not.include(".testcssselector");
           done();
         });
       });
@@ -60,7 +62,7 @@
         getHTML(testData.links[0], function(html) {
           html.should.be.a("string");
           html.length.should.be.above(0);
-          html.should.include("TCS: Team Centric Software GmbH & Co. KG");
+          html.should.include("Team Centric Software GmbH");
           done();
         });
       });

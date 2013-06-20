@@ -129,6 +129,12 @@ module.exports =
 		<h1 class="gigantic">Web-Applikationen für die Cloud</h1>
 	</header>
 
+	<style>
+	.testcssselector{
+		font-weight: bold;
+	}
+	</style>
+
 	<article>
 		<!-- SERVICES -->
 		<section id="services">

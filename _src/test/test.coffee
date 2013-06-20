@@ -39,6 +39,9 @@ describe 'HTML-dispatch-TEST', ->
 				data.meta.title.should.equal("TCS: Team Centric Software GmbH &amp; Co. KG")
 				should.exist( data.body )
 				data.body.should.not.be.empty
+
+				data.body.should.not.include( "$('#contactform')" )
+				data.body.should.not.include( ".testcssselector" )
 				
 				#console.log data.meta, data.body.length, data.h1
 				done()
@@ -70,7 +73,7 @@ describe 'HTML-dispatch-TEST', ->
 			getHTML testData.links[ 0 ], ( html )->
 				html.should.be.a( "string" )
 				html.length.should.be.above( 0 )
-				html.should.include( "TCS: Team Centric Software GmbH & Co. KG" )
+				html.should.include( "Team Centric Software GmbH" )
 				done()
 				return
 			return

@@ -138,7 +138,7 @@ module.exports = class HTMLExtractor
 						_startBody = parser._tokenizer._index
 
 					# start a script section to prevent text get within scripts
-					when "script"
+					when "script", "style"
 						_scriptMode = true
 
 					# start a h1 section to pull the text in h1 tags out of the html
@@ -195,7 +195,7 @@ module.exports = class HTMLExtractor
 						_h1Open = false
 						_h1LastOpen = false
 					# stop a script section
-					when "script"
+					when "script", "style"
 						_scriptMode = false
 				return
 

@@ -191,6 +191,10 @@ myExtrator.extract html, reduceTo, ( err, data )->
 
 ## Changelog
 
+#### `0.1.3`
+
+* Fixed extraction to remove style-tag content
+
 #### `0.1.2`
 
 * Updated documentation

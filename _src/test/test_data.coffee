@@ -1,4 +1,4 @@
-module.exports = 
+module.exports =
 	links: [
 		"http://www.tcs.de/"
 		"http://www.guenstig-selberkochen.de/"
@@ -22,7 +22,7 @@ module.exports =
 		"http://www.jrandfriends.de/"
 		"http://www.musischwung.com/"
 		"http://batuka-latin-rock.de/"
-		"http://www.happyness-voice.de/"
+		#"http://www.happyness-voice.de/"
 		"http://www.duo-piff-paff.ch/"
 		"http://www.eventmusik.at/"
 		"http://www.soft-light.de/"
@@ -47,7 +47,7 @@ module.exports =
 		"http://www.ingsteph.de/"
 		"http://www.photodil.de/"
 		"http://rump-studio.de/"
-		"http://www.handy-iphone-simlock.com/"
+		#"http://www.handy-iphone-simlock.com/"
 		"http://www.buddha.envy.nu/"
 		"http://www.london.dreamstation.com/"
 		"http://berlin.7hostfree.com/"
@@ -65,13 +65,13 @@ module.exports =
 		"http://www.hotelgritti.it/deu/preise.html"
 		"http://www.hotelmirafiori.com/jesolostrand.htm"
 		"http://www.seductive-lifestyle.de/"
-		"http://www.der-fashion-style.de/"
+		#"http://www.der-fashion-style.de/"
 		"http://www.internet-seo-blog.de/"
 		"http://www.rene-juenemann.de/"
 		"http://www.blogverdiener.de/"
 		"http://www.smartdoktor.de/"
 		"http://www.downloadflatrate.com/"
-		"http://e-sparschwein.de/"
+		#"http://e-sparschwein.de/"
 		"http://www.guenstig-selberkochen.de/"
 		"http://www.found4you.de/geschenkideen/hochzeitsgeschenke.html"
 		"http://www.djs4events.de/"
@@ -82,7 +82,7 @@ module.exports =
 		"http://www.die-hochzeitsfotografin.ch/"
 		"http://philipp-dothee.de/"
 		"http://www.djoliver.ch/"
-		"http://www.eheringe-guenstig.de/"
+		#"http://www.eheringe-guenstig.de/"
 		"http://www.zahnarzt-team-zuerich.ch/"
 	]
 		###
@@ -91,9 +91,9 @@ module.exports =
 	reduce: [
 		url: "http://www3.apoverlag.at/dynasite.cfm?dsmid=98698"
 		reduced: { tag: "div", attr: "id", val: "dscolumn1_2" }
-	, 
-		url: "http://e-sparschwein.de/"
-		reduced: { tag: "div", attr: "class", val: "content" }
+	,
+		url: "http://www.tcs.de/impress.html"
+		reduced: { tag: "div", attr: "class", val: "cm-sidebar" }
 	]
 
 	html: [
@@ -102,7 +102,7 @@ module.exports =
 	<title>TCS: Team Centric Software GmbH &amp; Co. KG</title>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->		
+	<![endif]-->
 	<link href="_tcs.css" media="all" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Covered+By+Your+Grace">
 	<meta content="width=device-width; initial-scale=1" name="viewport">
@@ -218,7 +218,7 @@ module.exports =
 					<p><a name="webmart"></a>Professionelle Homepage-, Online- und Webmaster-Tools als SaaS.<span class="extlink"><a target="_blank" href="http://www.webmart.de">www.webmart.de</a></span></p>
 				</section>
 				<div style="clear:left"></div>
-			</section>				
+			</section>
 		</section>
 
 		
@@ -227,7 +227,7 @@ module.exports =
 		<section id="contact">
 
 			<a name="contact"></a>
-			<section id="contactform">	<h1>Wir freuen uns auf Sie</h1><div style="display:none" id="statusmsg_error">Es sind leider nicht alle Felder ausgefüllt. Name und Nachricht sind Pflichtfelder.</div><form onsubmit="return TCS.checkForm(this)" method="post" action="http://www.webmart.de/wmfm.cfm" id="f_form"><input type="hidden" value="1F676312G52206" name="WMFMID"><p>Hallo TCS,<br>mein Name ist<input type="text" value="" name="name" class="ftext required" id="name"> von der Firma<input type="text" value="" name="company" class="ftext" id="company">aus<input type="text" value="" name="city" class="ftext" id="city">. Sie können mich via E-Mail unter<input type="text" value="" name="email" class="ftext required" id="email">oder telefonisch unter<input type="text" value="" name="phone" class="ftext" id="phone">erreichen!</p><p>Ich habe folgende Nachricht an Sie:<br><textarea class="ftextarea" name="message" id="message"></textarea></p><p><input type="submit" value="Senden" class="fbtn required"></p></form></section>
+			<section id="contactform">
 			<section id="contactmap">
 				<h1>Hamburg und München</h1>
 				<p>
@@ -283,26 +283,26 @@ module.exports =
 					Metzstr. 14b<br>D-81667 München<br>
 
 					Telefon: +49-(0)89 / 13 95 89-0<br>
-					Email: info@tcs.de 
+					Email: info@tcs.de
 				</p>
 				<p style="float:left">
 					<b>Gesetzliche Angaben</b><br>
 					Handelsregister Hamburg<br>
 					HRB 103067 (GmbH), HRA 107331 (KG)<br>
 
-					Umsatzsteuer-ID-Nr.: DE194938637 
+					Umsatzsteuer-ID-Nr.: DE194938637
 				</p>
 				<p style="clear:left"></p>
 			</div>
 		</section>
 	</article>
-	<script>		
+	<script>
 		$(function() {
 			$('#contactform').html( tcs.contact.contactform() );
 		});
 	</script>
 	<div style="height:40px"></div>
-	<script type="text/javascript">WMCounterID='0crdtaea7h';WMCounterRef=top.document.referrer;</script><script src="http://counter.webmart.de/c/c.js"></script>	
+	<script type="text/javascript">WMCounterID='0crdtaea7h';WMCounterRef=top.document.referrer;</script><script src="http://counter.webmart.de/c/c.js"></script>
 
 </body></html>
 		"""
@@ -336,7 +336,7 @@ module.exports =
 	<link type="image/ico" href="/favicon.ico" rel="shortcut icon">
 <link href="/static/sys/v9/icons/touch-icon-iphone.png" rel="apple-touch-icon">
 <link href="/static/sys/v9/icons/touch-icon-ipad.png" sizes="72x72" rel="apple-touch-icon">
-<link href="/static/sys/v9/icons/touch-icon-iphone4.png" sizes="114x114" rel="apple-touch-icon"> 
+<link href="/static/sys/v9/icons/touch-icon-iphone4.png" sizes="114x114" rel="apple-touch-icon">
 <!-- ##SPONTAG: CSS## -->
 	<link href="/layout/css/style-V3-21.css" type="text/css" rel="stylesheet">
 	<!--[if lte IE 6]>
@@ -382,7 +382,7 @@ module.exports =
 <body class="spHomepageContent spCenteredPage" id="home">
 <iframe width="0" height="0" frameborder="0" style="display:none;" name="spon_vdz_countframe" src="/static/sys/pixel.gif"></iframe><div id="spSZM">
 <!-- SZM VERSION="1.3" -->
-<script type="text/javascript"> 
+<script type="text/javascript">
 &lt;!--
 var IVW="http://spiegel.ivwbox.de/cgi-bin/ivw/CP/1001;/home/c-18/be-PB64-aG9tZXBhZ2UvY2VudGVy/szwprofil-1001";
 document.write('&lt;img src="'+IVW+'?r='+escape(document.referrer)+'&amp;d='+(Math.random()*100000)+'" width="1" height="1" border="0" align="right" id="spIvwPixel" alt="" /&gt;');
@@ -396,7 +396,7 @@ document.write('&lt;img src="'+IVW+'?r='+escape(document.referrer)+'&amp;d='+(Ma
 </div>
 
 <div style="position:absolute;top: -100px;left: 0px;">
-<script type="text/javascript"> 
+<script type="text/javascript">
 &lt;!--
 spNm({
 	'sp.site': '1',
@@ -430,7 +430,7 @@ if (spHashParams["oas.belegung"] != null) {
 
 OAS_mjxscripturl = OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + OAS_query;
 
-function OAS_RICH(pos) { 
+function OAS_RICH(pos) {
 	if (pos != '_') {
 		document.write('&lt;a href="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" target="_blank" &gt;&lt;img src="' + OAS_url + 'adstream_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" border="0" alt=""&gt;&lt;\/a&gt;');
 	}
@@ -448,14 +448,14 @@ function OAS_RICH(pos) {
  <div id="spOasTop">
 <script type="text/javascript">
 &lt;!--
-	OAS_RICH('Top1'); 
+	OAS_RICH('Top1');
 // --&gt;
 </script><a target="_blank" href="http://adserv.quality-channel.de/RealMedia/ads/click_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Top1"><img border="0" alt="" src="http://adserv.quality-channel.de/RealMedia/ads/adstream_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Top1" class="mzaqxvhbdbywoqgbfexv"></a><br clear="all" class="spBreakNoHeight">
 
 <div style="position:absolute;top:-100px;left:0px;">
 	<script type="text/javascript">
 	&lt;!--
-		OAS_RICH('Middle'); 
+		OAS_RICH('Middle');
 	// --&gt;
 	</script><a target="_blank" href="http://adserv.quality-channel.de/RealMedia/ads/click_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Middle"><img border="0" alt="" src="http://adserv.quality-channel.de/RealMedia/ads/adstream_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Middle" class="mzaqxvhbdbywoqgbfexv"></a>
 </div>
@@ -490,7 +490,7 @@ function OAS_RICH(pos) {
 							</form>
                         </div>
 					</div>
-		<ul id="spChannel"> 
+		<ul id="spChannel">
 			<li>
 						<a target="_self" href="/">NACHRICHTEN</a><ul>
 						<li>
@@ -641,13 +641,13 @@ function OAS_RICH(pos) {
 									</li>
 							<script type="text/javascript">
 						&lt;!--
-							OAS_RICH('Sub1'); 
+							OAS_RICH('Sub1');
 						// --&gt;
 						</script><a target="_blank" href="http://adserv.quality-channel.de/RealMedia/ads/click_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Sub1"><img border="0" alt="" src="http://adserv.quality-channel.de/RealMedia/ads/adstream_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Sub1" class="mzaqxvhbdbywoqgbfexv"></a>
 						
 						<script type="text/javascript">
 						&lt;!--
-							OAS_RICH('Sub2'); 
+							OAS_RICH('Sub2');
 						// --&gt;
 						</script><a target="_blank" href="http://adserv.quality-channel.de/RealMedia/ads/click_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Sub2"><img border="0" alt="" src="http://adserv.quality-channel.de/RealMedia/ads/adstream_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Sub2" class="mzaqxvhbdbywoqgbfexv"></a>
 						</ul>
@@ -669,7 +669,7 @@ function OAS_RICH(pos) {
 					<li>
 						<a class="" title="" target="_blank" href="http://www.amazon.de/spiegel">SHOP</a></li>
 					<li class="spHeaderFollow">
-					<span>Folgen:</span> 
+					<span>Folgen:</span>
 					<a title="Facebook" href="http://www.facebook.com/spiegelonline" target="_blank"><img width="14" hspace="0" height="14" border="0" src="/static/sys/v9/icons/facebook_14.jpg"></a>
 					<a title="Twitter" href="https://twitter.com/intent/follow?screen_name=SPIEGELONLINE" target="_blank"><img width="14" hspace="0" height="14" border="0" src="/static/sys/v9/icons/twitter_14.jpg"></a>
 					<a title="Google+" href="https://plus.google.com/106419678219919655169/posts" target="_blank"><img width="14" hspace="0" height="14" border="0" src="/static/sys/v9/icons/googleplus_14.jpg"></a>
@@ -717,7 +717,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 </div>
 <script type="text/javascript">
 			&lt;!--
-				OAS_RICH('Top2'); 
+				OAS_RICH('Top2');
 			// --&gt;
 			</script><a target="_blank" href="http://adserv.quality-channel.de/RealMedia/ads/click_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Top2"><img border="0" alt="" src="http://adserv.quality-channel.de/RealMedia/ads/adstream_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Top2" class="mzaqxvhbdbywoqgbfexv"></a>
 			<br clear="all" class="spBreakNoHeight">
@@ -737,7 +737,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 					</div>
 				</div>
 				<script type="text/javascript">
-					&lt;!-- 
+					&lt;!--
 						spTopPosterInit();
 					// --&gt;
 				</script>
@@ -813,15 +813,15 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 
 <div class="spListboxCenterteaser spLead3 spClearFix">
 			<ul class="spClearFix"><li class="spFirst"><div class="spAssetHdln">Thatchers Politik</div><div style="width: 162px;" class="spArticleImageBox">
-				<a title="  Das Erbe der Eisernen Lady  " href="/politik/ausland/thatchers-vermaechtnis-sie-teilte-das-land-in-reiche-und-habenichtse-a-893218.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn2.spiegel.de/images/image-481505-thumbbiga-dwjd.jpg"></a></div>			
+				<a title="  Das Erbe der Eisernen Lady  " href="/politik/ausland/thatchers-vermaechtnis-sie-teilte-das-land-in-reiche-und-habenichtse-a-893218.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn2.spiegel.de/images/image-481505-thumbbiga-dwjd.jpg"></a></div>
 
 		<a title="  Das Erbe der Eisernen Lady  " href="/politik/ausland/thatchers-vermaechtnis-sie-teilte-das-land-in-reiche-und-habenichtse-a-893218.html"><strong><b>Das Erbe der Eisernen Lady</b></strong></a></li>
 		<li><div class="spAssetHdln">Vergleich</div><div style="width: 162px;" class="spArticleImageBox">
-				<a title="  Was Merkel von Thatcher unterscheidet  " href="/politik/ausland/historischer-vergleich-von-margaret-thatcher-und-angela-merkel-a-893208.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-481634-thumbbiga-lekt.jpg"></a></div>			
+				<a title="  Was Merkel von Thatcher unterscheidet  " href="/politik/ausland/historischer-vergleich-von-margaret-thatcher-und-angela-merkel-a-893208.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-481634-thumbbiga-lekt.jpg"></a></div>
 
 		<a title="  Was Merkel von Thatcher unterscheidet  " href="/politik/ausland/historischer-vergleich-von-margaret-thatcher-und-angela-merkel-a-893208.html"><strong><b>Was Merkel von Thatcher unterscheidet</b></strong></a></li>
 		<li><div class="spAssetHdln">Thatcher im Pop</div><div style="width: 162px;" class="spArticleImageBox">
-				<a title="  Hits aus Hass  " href="/kultur/musik/margaret-thatcher-in-der-popkultur-der-achtziger-a-893152.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn3.spiegel.de/images/image-481682-thumbbiga-mmeq.jpg"></a></div>			
+				<a title="  Hits aus Hass  " href="/kultur/musik/margaret-thatcher-in-der-popkultur-der-achtziger-a-893152.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn3.spiegel.de/images/image-481682-thumbbiga-mmeq.jpg"></a></div>
 
 		<a title="  Hits aus Hass  " href="/kultur/musik/margaret-thatcher-in-der-popkultur-der-achtziger-a-893152.html"><strong><b>Hits aus Hass</b></strong></a></li>
 		</ul>
@@ -880,77 +880,77 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			<div class="spAssetHdln"><a title="Videos" target="_self" href="http://www.spiegel.de/video/">Videos</a></div><div class="spPaginatorControlPanel">
 			<div class="spPaginatorControl spActive"><a href="/artikel/a-267802.html" onclick="spMMLBrowsespGalleryBoxX107147.showNum('0'); return false;">1</a></div><div class="spPaginatorControl">|<a href="/artikel/a-267802.html" onclick="spMMLBrowsespGalleryBoxX107147.showNum('1'); return false;">2</a></div><div class="spPaginatorControl">|<a href="/artikel/a-267802.html" onclick="spMMLBrowsespGalleryBoxX107147.showNum('2'); return false;">3</a></div><div class="spPaginatorControl">|<a href="/artikel/a-267802.html" onclick="spMMLBrowsespGalleryBoxX107147.showNum('3'); return false;">4</a></div><div class="spPaginatorControl">|<a href="/artikel/a-267802.html" onclick="spMMLBrowsespGalleryBoxX107147.showNum('4'); return false;">5</a></div></div><div style="display: block;" class="spPaginatorPage">
 			<ul class="spClearFix"><li class="spFirst"><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Tod von Margaret Thatcher:    Alt-Bundeskanzler Kohl erschüttert " onclick="return spOpenVideo(this,'1264823')" href="/video/alt-bundeskanzler-kohl-erschuettert-ueber-tod-von-margaret-thatcher-video-1264823.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn4.spiegel.de/images/image-481703-videothumbmultimedia-auhf.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Tod von Margaret Thatcher:    Alt-Bundeskanzler Kohl erschüttert " onclick="return spOpenVideo(this,'1264823')" href="/video/alt-bundeskanzler-kohl-erschuettert-ueber-tod-von-margaret-thatcher-video-1264823.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn4.spiegel.de/images/image-481703-videothumbmultimedia-auhf.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Tod von Margaret Thatcher: Alt-Bundeskanzler Kohl erschüttert" onclick="return spOpenVideo(this,'1264823')" href="/video/alt-bundeskanzler-kohl-erschuettert-ueber-tod-von-margaret-thatcher-video-1264823.html"><strong>Tod von Margaret Thatcher: </strong> <span>Alt-Bundeskanzler Kohl erschüttert</span></a></li>	
+		<a title="Tod von Margaret Thatcher: Alt-Bundeskanzler Kohl erschüttert" onclick="return spOpenVideo(this,'1264823')" href="/video/alt-bundeskanzler-kohl-erschuettert-ueber-tod-von-margaret-thatcher-video-1264823.html"><strong>Tod von Margaret Thatcher: </strong> <span>Alt-Bundeskanzler Kohl erschüttert</span></a></li>
 		<li><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Krise in Fernost:    Kim Jong Un schickt die Schäferhunde los " onclick="return spOpenVideo(this,'1264691')" href="/video/nordkorea-schaeferhunde-im-kampfeinsatz-video-1264691.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn2.spiegel.de/images/image-481331-videothumbmultimedia-tssm.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Krise in Fernost:    Kim Jong Un schickt die Schäferhunde los " onclick="return spOpenVideo(this,'1264691')" href="/video/nordkorea-schaeferhunde-im-kampfeinsatz-video-1264691.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn2.spiegel.de/images/image-481331-videothumbmultimedia-tssm.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Krise in Fernost: Kim Jong Un schickt die Schäferhunde los" onclick="return spOpenVideo(this,'1264691')" href="/video/nordkorea-schaeferhunde-im-kampfeinsatz-video-1264691.html"><strong>Krise in Fernost: </strong> <span>Kim Jong Un schickt die Schäferhunde los</span></a></li>	
+		<a title="Krise in Fernost: Kim Jong Un schickt die Schäferhunde los" onclick="return spOpenVideo(this,'1264691')" href="/video/nordkorea-schaeferhunde-im-kampfeinsatz-video-1264691.html"><strong>Krise in Fernost: </strong> <span>Kim Jong Un schickt die Schäferhunde los</span></a></li>
 		<li><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Extremfahren in Georgien:    Bleifuß im Berufsverkehr " onclick="return spOpenVideo(this,'1264701')" href="/video/stuntfahrer-aus-georgien-video-von-raserei-wird-hit-auf-you-tube-video-1264701.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-481370-videothumbmultimedia-nrqy.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Extremfahren in Georgien:    Bleifuß im Berufsverkehr " onclick="return spOpenVideo(this,'1264701')" href="/video/stuntfahrer-aus-georgien-video-von-raserei-wird-hit-auf-you-tube-video-1264701.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-481370-videothumbmultimedia-nrqy.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Extremfahren in Georgien: Bleifuß im Berufsverkehr" onclick="return spOpenVideo(this,'1264701')" href="/video/stuntfahrer-aus-georgien-video-von-raserei-wird-hit-auf-you-tube-video-1264701.html"><strong>Extremfahren in Georgien: </strong> <span>Bleifuß im Berufsverkehr</span></a></li>	
+		<a title="Extremfahren in Georgien: Bleifuß im Berufsverkehr" onclick="return spOpenVideo(this,'1264701')" href="/video/stuntfahrer-aus-georgien-video-von-raserei-wird-hit-auf-you-tube-video-1264701.html"><strong>Extremfahren in Georgien: </strong> <span>Bleifuß im Berufsverkehr</span></a></li>
 		</ul>
 					</div>
 					<div style="display: none;" class="spPaginatorPage">
 				<ul class="spClearFix"><li class="spFirst"><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Gefängnisarzt und Tatort-Star:    SPIEGEL TV über Joe Bausch " onclick="return spOpenVideo(this,'1264048')" href="/video/spiegel-tv-ueber-joe-bausch-gefaengnisarzt-und-tatort-star-video-1264048.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-389464-thumbbiga-jabn.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Gefängnisarzt und Tatort-Star:    SPIEGEL TV über Joe Bausch " onclick="return spOpenVideo(this,'1264048')" href="/video/spiegel-tv-ueber-joe-bausch-gefaengnisarzt-und-tatort-star-video-1264048.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-389464-thumbbiga-jabn.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Gefängnisarzt und Tatort-Star: SPIEGEL TV über Joe Bausch" onclick="return spOpenVideo(this,'1264048')" href="/video/spiegel-tv-ueber-joe-bausch-gefaengnisarzt-und-tatort-star-video-1264048.html"><strong>Gefängnisarzt und Tatort-Star: </strong> <span>SPIEGEL TV über Joe Bausch</span></a></li>	
+		<a title="Gefängnisarzt und Tatort-Star: SPIEGEL TV über Joe Bausch" onclick="return spOpenVideo(this,'1264048')" href="/video/spiegel-tv-ueber-joe-bausch-gefaengnisarzt-und-tatort-star-video-1264048.html"><strong>Gefängnisarzt und Tatort-Star: </strong> <span>SPIEGEL TV über Joe Bausch</span></a></li>
 		<li><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Wegen Gerichtsprozess:    Krawalle in der Türkei " onclick="return spOpenVideo(this,'1264775')" href="/video/krawalle-in-der-tuerkei-wegen-gerichtsprozess-video-1264775.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn4.spiegel.de/images/image-481657-videothumbmultimedia-hnab.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Wegen Gerichtsprozess:    Krawalle in der Türkei " onclick="return spOpenVideo(this,'1264775')" href="/video/krawalle-in-der-tuerkei-wegen-gerichtsprozess-video-1264775.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn4.spiegel.de/images/image-481657-videothumbmultimedia-hnab.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Wegen Gerichtsprozess: Krawalle in der Türkei" onclick="return spOpenVideo(this,'1264775')" href="/video/krawalle-in-der-tuerkei-wegen-gerichtsprozess-video-1264775.html"><strong>Wegen Gerichtsprozess: </strong> <span>Krawalle in der Türkei</span></a></li>	
+		<a title="Wegen Gerichtsprozess: Krawalle in der Türkei" onclick="return spOpenVideo(this,'1264775')" href="/video/krawalle-in-der-tuerkei-wegen-gerichtsprozess-video-1264775.html"><strong>Wegen Gerichtsprozess: </strong> <span>Krawalle in der Türkei</span></a></li>
 		<li><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Exhumierung von Pablo Neruda:    Wurde der Dichter vergiftet? " onclick="return spOpenVideo(this,'1264708')" href="/video/exhumierung-von-pablo-neruda-video-1264708.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-481398-videothumbmultimedia-utbk.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Exhumierung von Pablo Neruda:    Wurde der Dichter vergiftet? " onclick="return spOpenVideo(this,'1264708')" href="/video/exhumierung-von-pablo-neruda-video-1264708.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-481398-videothumbmultimedia-utbk.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Exhumierung von Pablo Neruda: Wurde der Dichter vergiftet?" onclick="return spOpenVideo(this,'1264708')" href="/video/exhumierung-von-pablo-neruda-video-1264708.html"><strong>Exhumierung von Pablo Neruda: </strong> <span>Wurde der Dichter vergiftet?</span></a></li>	
+		<a title="Exhumierung von Pablo Neruda: Wurde der Dichter vergiftet?" onclick="return spOpenVideo(this,'1264708')" href="/video/exhumierung-von-pablo-neruda-video-1264708.html"><strong>Exhumierung von Pablo Neruda: </strong> <span>Wurde der Dichter vergiftet?</span></a></li>
 		</ul>
 					</div>
 					<div style="display: none;" class="spPaginatorPage">
 				<ul class="spClearFix"><li class="spFirst"><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Kanzlerin trifft Kreml-Chef:    Merkel mahnt freie Arbeit für NGO in Russland an " onclick="return spOpenVideo(this,'1264657')" href="/video/merkel-trifft-putin-video-1264657.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn3.spiegel.de/images/image-481246-thumbbiga-pcga.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Kanzlerin trifft Kreml-Chef:    Merkel mahnt freie Arbeit für NGO in Russland an " onclick="return spOpenVideo(this,'1264657')" href="/video/merkel-trifft-putin-video-1264657.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn3.spiegel.de/images/image-481246-thumbbiga-pcga.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Kanzlerin trifft Kreml-Chef: Merkel mahnt freie Arbeit für NGO in Russland an" onclick="return spOpenVideo(this,'1264657')" href="/video/merkel-trifft-putin-video-1264657.html"><strong>Kanzlerin trifft Kreml-Chef: </strong> <span>Merkel mahnt freie Arbeit für NGO in Russland an</span></a></li>	
+		<a title="Kanzlerin trifft Kreml-Chef: Merkel mahnt freie Arbeit für NGO in Russland an" onclick="return spOpenVideo(this,'1264657')" href="/video/merkel-trifft-putin-video-1264657.html"><strong>Kanzlerin trifft Kreml-Chef: </strong> <span>Merkel mahnt freie Arbeit für NGO in Russland an</span></a></li>
 		<li><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Putin über Korea-Krise:    Tschernobyl könnte wie ein Kindermärchen erscheinen " onclick="return spOpenVideo(this,'1264739')" href="/video/putin-zu-korea-tschernobyl-koennte-wie-ein-kindermaerchen-erscheinen-video-1264739.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-481594-videothumbmultimedia-ejdp.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Putin über Korea-Krise:    Tschernobyl könnte wie ein Kindermärchen erscheinen " onclick="return spOpenVideo(this,'1264739')" href="/video/putin-zu-korea-tschernobyl-koennte-wie-ein-kindermaerchen-erscheinen-video-1264739.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-481594-videothumbmultimedia-ejdp.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Putin über Korea-Krise: Tschernobyl könnte wie ein Kindermärchen erscheinen" onclick="return spOpenVideo(this,'1264739')" href="/video/putin-zu-korea-tschernobyl-koennte-wie-ein-kindermaerchen-erscheinen-video-1264739.html"><strong>Putin über Korea-Krise: </strong> <span>"Tschernobyl könnte wie ein Kindermärchen erscheinen"</span></a></li>	
+		<a title="Putin über Korea-Krise: Tschernobyl könnte wie ein Kindermärchen erscheinen" onclick="return spOpenVideo(this,'1264739')" href="/video/putin-zu-korea-tschernobyl-koennte-wie-ein-kindermaerchen-erscheinen-video-1264739.html"><strong>Putin über Korea-Krise: </strong> <span>"Tschernobyl könnte wie ein Kindermärchen erscheinen"</span></a></li>
 		<li><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Neu im Kino:    Unsterbliche Seelen, Baby-Blues und ein Schreckenszimmer " onclick="return spOpenVideo(this,'1264122')" href="/video/neu-im-kino-die-wichtigsten-filme-der-woche-video-1264122.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-479168-thumbbiga-epgb.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Neu im Kino:    Unsterbliche Seelen, Baby-Blues und ein Schreckenszimmer " onclick="return spOpenVideo(this,'1264122')" href="/video/neu-im-kino-die-wichtigsten-filme-der-woche-video-1264122.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-479168-thumbbiga-epgb.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Neu im Kino: Unsterbliche Seelen, Baby-Blues und ein Schreckenszimmer" onclick="return spOpenVideo(this,'1264122')" href="/video/neu-im-kino-die-wichtigsten-filme-der-woche-video-1264122.html"><strong>Neu im Kino: </strong> <span>Unsterbliche Seelen, Baby-Blues und ein Schreckenszimmer</span></a></li>	
+		<a title="Neu im Kino: Unsterbliche Seelen, Baby-Blues und ein Schreckenszimmer" onclick="return spOpenVideo(this,'1264122')" href="/video/neu-im-kino-die-wichtigsten-filme-der-woche-video-1264122.html"><strong>Neu im Kino: </strong> <span>Unsterbliche Seelen, Baby-Blues und ein Schreckenszimmer</span></a></li>
 		</ul>
 					</div>
 					<div style="display: none;" class="spPaginatorPage">
 				<ul class="spClearFix"><li class="spFirst"><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Panzerfahrer in Russland:    Verkehrsrowdys in Uniform " onclick="return spOpenVideo(this,'1264267')" href="/video/internetvideo-kreuzende-panzer-auf-russlands-strassen-video-1264267.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn2.spiegel.de/images/image-480545-videothumbmultimedia-bonv.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Panzerfahrer in Russland:    Verkehrsrowdys in Uniform " onclick="return spOpenVideo(this,'1264267')" href="/video/internetvideo-kreuzende-panzer-auf-russlands-strassen-video-1264267.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn2.spiegel.de/images/image-480545-videothumbmultimedia-bonv.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Panzerfahrer in Russland: Verkehrsrowdys in Uniform" onclick="return spOpenVideo(this,'1264267')" href="/video/internetvideo-kreuzende-panzer-auf-russlands-strassen-video-1264267.html"><strong>Panzerfahrer in Russland: </strong> <span>Verkehrsrowdys in Uniform</span></a></li>	
+		<a title="Panzerfahrer in Russland: Verkehrsrowdys in Uniform" onclick="return spOpenVideo(this,'1264267')" href="/video/internetvideo-kreuzende-panzer-auf-russlands-strassen-video-1264267.html"><strong>Panzerfahrer in Russland: </strong> <span>Verkehrsrowdys in Uniform</span></a></li>
 		<li><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Fukushima-Reaktor:    120 Tonnen radioaktives Wasser ausgelaufen " onclick="return spOpenVideo(this,'1264458')" href="/video/fukushima-radioaktives-wasser-aus-reaktor-ausgelaufen-video-1264458.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn2.spiegel.de/images/image-481035-thumbbiga-ckei.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Fukushima-Reaktor:    120 Tonnen radioaktives Wasser ausgelaufen " onclick="return spOpenVideo(this,'1264458')" href="/video/fukushima-radioaktives-wasser-aus-reaktor-ausgelaufen-video-1264458.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn2.spiegel.de/images/image-481035-thumbbiga-ckei.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Fukushima-Reaktor: 120 Tonnen radioaktives Wasser ausgelaufen" onclick="return spOpenVideo(this,'1264458')" href="/video/fukushima-radioaktives-wasser-aus-reaktor-ausgelaufen-video-1264458.html"><strong>Fukushima-Reaktor: </strong> <span>120 Tonnen radioaktives Wasser ausgelaufen</span></a></li>	
+		<a title="Fukushima-Reaktor: 120 Tonnen radioaktives Wasser ausgelaufen" onclick="return spOpenVideo(this,'1264458')" href="/video/fukushima-radioaktives-wasser-aus-reaktor-ausgelaufen-video-1264458.html"><strong>Fukushima-Reaktor: </strong> <span>120 Tonnen radioaktives Wasser ausgelaufen</span></a></li>
 		<li><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" H7N9-Virus:    Vogelgrippe breitet sich in China aus " onclick="return spOpenVideo(this,'1264464')" href="/video/h7n9-virus-vogelgrippe-breitet-sich-in-china-aus-video-1264464.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn4.spiegel.de/images/image-481013-thumbbiga-bxxk.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" H7N9-Virus:    Vogelgrippe breitet sich in China aus " onclick="return spOpenVideo(this,'1264464')" href="/video/h7n9-virus-vogelgrippe-breitet-sich-in-china-aus-video-1264464.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn4.spiegel.de/images/image-481013-thumbbiga-bxxk.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="H7N9-Virus: Vogelgrippe breitet sich in China aus" onclick="return spOpenVideo(this,'1264464')" href="/video/h7n9-virus-vogelgrippe-breitet-sich-in-china-aus-video-1264464.html"><strong>H7N9-Virus: </strong> <span>Vogelgrippe breitet sich in China aus</span></a></li>	
+		<a title="H7N9-Virus: Vogelgrippe breitet sich in China aus" onclick="return spOpenVideo(this,'1264464')" href="/video/h7n9-virus-vogelgrippe-breitet-sich-in-china-aus-video-1264464.html"><strong>H7N9-Virus: </strong> <span>Vogelgrippe breitet sich in China aus</span></a></li>
 		</ul>
 					</div>
 					<div style="display: none;" class="spPaginatorPage">
 				<ul class="spClearFix"><li class="spFirst"><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Nordkorea:    Ausländische Diplomaten bleiben trotz Warnung " onclick="return spOpenVideo(this,'1264466')" href="/video/nordkorea-auslaendische-diplomaten-bleiben-in-pjoengjang-video-1264466.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn3.spiegel.de/images/image-471172-thumbbiga-sogb.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Nordkorea:    Ausländische Diplomaten bleiben trotz Warnung " onclick="return spOpenVideo(this,'1264466')" href="/video/nordkorea-auslaendische-diplomaten-bleiben-in-pjoengjang-video-1264466.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn3.spiegel.de/images/image-471172-thumbbiga-sogb.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Nordkorea: Ausländische Diplomaten bleiben trotz Warnung" onclick="return spOpenVideo(this,'1264466')" href="/video/nordkorea-auslaendische-diplomaten-bleiben-in-pjoengjang-video-1264466.html"><strong>Nordkorea: </strong> <span>Ausländische Diplomaten bleiben trotz Warnung</span></a></li>	
+		<a title="Nordkorea: Ausländische Diplomaten bleiben trotz Warnung" onclick="return spOpenVideo(this,'1264466')" href="/video/nordkorea-auslaendische-diplomaten-bleiben-in-pjoengjang-video-1264466.html"><strong>Nordkorea: </strong> <span>Ausländische Diplomaten bleiben trotz Warnung</span></a></li>
 		<li><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Neu entdecktes Filmdokument:    Video zeigt Martin Luther Kings Mörder nach der Festnahme " onclick="return spOpenVideo(this,'1264470')" href="/video/video-zeigt-martin-luther-kings-moerder-video-1264470.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-481100-videothumbmultimedia-eqzv.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Neu entdecktes Filmdokument:    Video zeigt Martin Luther Kings Mörder nach der Festnahme " onclick="return spOpenVideo(this,'1264470')" href="/video/video-zeigt-martin-luther-kings-moerder-video-1264470.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-481100-videothumbmultimedia-eqzv.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Neu entdecktes Filmdokument: Video zeigt Martin Luther Kings Mörder nach der Festnahme" onclick="return spOpenVideo(this,'1264470')" href="/video/video-zeigt-martin-luther-kings-moerder-video-1264470.html"><strong>Neu entdecktes Filmdokument: </strong> <span>Video zeigt Martin Luther Kings Mörder nach der Festnahme</span></a></li>	
+		<a title="Neu entdecktes Filmdokument: Video zeigt Martin Luther Kings Mörder nach der Festnahme" onclick="return spOpenVideo(this,'1264470')" href="/video/video-zeigt-martin-luther-kings-moerder-video-1264470.html"><strong>Neu entdecktes Filmdokument: </strong> <span>Video zeigt Martin Luther Kings Mörder nach der Festnahme</span></a></li>
 		<li><div style="width: 162px;" class="spVideoPic spArticleImageBox">
-				<a title=" Simulant im Straßenverkehr:    Autokamera entlarvt Unfallopfer " onclick="return spOpenVideo(this,'1263872')" href="/video/russischer-versicherungsbetrug-dashcam-dokumentiert-gefakten-unfall-video-1263872.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn4.spiegel.de/images/image-479777-videothumbmultimedia-qnpl.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>			
+				<a title=" Simulant im Straßenverkehr:    Autokamera entlarvt Unfallopfer " onclick="return spOpenVideo(this,'1263872')" href="/video/russischer-versicherungsbetrug-dashcam-dokumentiert-gefakten-unfall-video-1263872.html"><img width="160" height="120" border="0" style="" alt="" title="" src="http://cdn4.spiegel.de/images/image-479777-videothumbmultimedia-qnpl.jpg"><img width="39" height="39" title="Video abspielen..." alt="Video abspielen..." class="spIEsixPng spVideoPlayButton" src="/static/sys/v8/buttons/play-trans_37x37.png"></a></div>
 
-		<a title="Simulant im Straßenverkehr: Autokamera entlarvt Unfallopfer" onclick="return spOpenVideo(this,'1263872')" href="/video/russischer-versicherungsbetrug-dashcam-dokumentiert-gefakten-unfall-video-1263872.html"><strong>Simulant im Straßenverkehr: </strong> <span>Autokamera entlarvt Unfallopfer</span></a></li>	
+		<a title="Simulant im Straßenverkehr: Autokamera entlarvt Unfallopfer" onclick="return spOpenVideo(this,'1263872')" href="/video/russischer-versicherungsbetrug-dashcam-dokumentiert-gefakten-unfall-video-1263872.html"><strong>Simulant im Straßenverkehr: </strong> <span>Autokamera entlarvt Unfallopfer</span></a></li>
 		</ul>
 				</div>
 		</div>
@@ -2166,7 +2166,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			<div class="spAssetHdln">Was Dienstag wichtig wird</div><ul class="spClearFix"><li class="spFirst"><div style="width: 293px; margin-bottom:5px;" class="spArticleImageBox">
 				<a title=" Bund und Länder auf Endlagersuche " href="/politik/deutschland/was-am-8-4-wichtig-wird-atommuell-vermoegen-in-europa-champions-league-a-893170.html"><img width="291" height="170" border="0" style="float: none;" alt="" title="" src="http://cdn4.spiegel.de/images/image-287227-thumbflexhp-oicl.jpg"></a><div style="width: 293px;">
 						<div align="right" class="spCredit">AFP</div>
-					</div></div>			
+					</div></div>
 
 		<a title=" Bund und Länder auf Endlagersuche " href="/politik/deutschland/was-am-8-4-wichtig-wird-atommuell-vermoegen-in-europa-champions-league-a-893170.html"><b>Bund und Länder auf Endlagersuche</b></a></li>
 		</ul>
@@ -2181,7 +2181,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 							<p class="spMagTitel">
 								<a href="/spiegel/">Das letzte Geheimnis</a>
 									</p>
-						<p class="spMagTitelSub"> 
+						<p class="spMagTitelSub">
 								Warum ging der Playboy und Finanzjongleur Gunter Sachs in den Tod?</p>
 						<a href="/spiegel/"><img width="291" height="170" border="0" style="border: 1px solid #666666;" alt="" title="" src="http://cdn1.spiegel.de/images/image-481044-thumbflexhp-fows.jpg"></a><div>
 								<div align="right" class="spCredit">Omedias/ face to face</div>
@@ -2206,7 +2206,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 		</a>
 		
 		<p>
-			<a href="/spiegel/vorab/">Vorabmeldungen</a> 
+			<a href="/spiegel/vorab/">Vorabmeldungen</a>
 			| <a href="http://abo.spiegel.de/go/place" target="_blank">Abo</a>
 		</p>
 		<p>
@@ -2244,7 +2244,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			
 </div><div class="spListbox spClearFix">
 			<div class="spAssetHdln">Ubuntu im Test</div><ul class="spClearFix"><li class="spFirst"><div style="width: 293px; margin-bottom:5px;" class="spArticleImageBox">
-				<a title=" Stärken und Schwächen der Linux-Software " href="/netzwelt/gadgets/ubuntu-im-test-bilanz-ueber-ein-jahr-linux-a-892712.html"><img width="291" height="170" border="0" style="float: none;" alt="" title="" src="http://cdn2.spiegel.de/images/image-313265-thumbflexhp-vplh.jpg"></a></div>			
+				<a title=" Stärken und Schwächen der Linux-Software " href="/netzwelt/gadgets/ubuntu-im-test-bilanz-ueber-ein-jahr-linux-a-892712.html"><img width="291" height="170" border="0" style="float: none;" alt="" title="" src="http://cdn2.spiegel.de/images/image-313265-thumbflexhp-vplh.jpg"></a></div>
 
 		<a title=" Stärken und Schwächen der Linux-Software " href="/netzwelt/gadgets/ubuntu-im-test-bilanz-ueber-ein-jahr-linux-a-892712.html"><b>Stärken und Schwächen der Linux-Software</b></a></li>
 		</ul>
@@ -2280,7 +2280,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			<div class="spAssetHdln">Lazio vs. AS Rom</div><ul class="spClearFix"><li class="spFirst"><div style="width: 293px; margin-bottom:5px;" class="spArticleImageBox">
 				<a title=" Gewalt beim römischen Stadtderby " href="/sport/fussball/krawalle-beim-stadtderby-lazio-gegen-as-rom-a-893243.html"><img width="291" height="170" border="0" style="float: none;" alt="" title="" src="http://cdn1.spiegel.de/images/image-481714-thumbflexhp-vfft.jpg"></a><div style="width: 293px;">
 						<div align="right" class="spCredit">DPA</div>
-					</div></div>			
+					</div></div>
 
 		<a title=" Gewalt beim römischen Stadtderby " href="/sport/fussball/krawalle-beim-stadtderby-lazio-gegen-as-rom-a-893243.html"><b>Gewalt beim römischen Stadtderby</b></a></li>
 		</ul>
@@ -2317,9 +2317,9 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			<div class="spAssetHdln"><a title="SPIEGEL.TV - Fernsehen im Netz" target="_blank" href="http://www.spiegel.tv/">SPIEGEL.TV - Fernsehen im Netz</a></div><ul class="spClearFix"><li class="spFirst"><div style="width: 293px; margin-bottom:5px;" class="spVideoPic spArticleImageBox">
 				<a target="_blank" href="http://www.spiegel.tv/filme/enkeltrick/"><img width="291" height="170" border="0" style="float: none;" alt="" title="" src="http://cdn4.spiegel.de/images/image-481617-thumbflexhp-vtxo.jpg"><img alt="Video" class="spIEsixPng" src="/static/sys/v9/buttons/but_video_2.png"></a><div style="width: 293px;">
 						<div align="right" class="spCredit">SPIEGEL TV</div>
-					</div></div>			
+					</div></div>
 
-		<a title="Der Enkeltrick: Wie Sylwia K. ihre Opfer ausnimmt" target="_blank" href="http://www.spiegel.tv/filme/enkeltrick/"><strong>Der Enkeltrick: </strong> <span>Wie Sylwia K. ihre Opfer ausnimmt</span></a></li>	
+		<a title="Der Enkeltrick: Wie Sylwia K. ihre Opfer ausnimmt" target="_blank" href="http://www.spiegel.tv/filme/enkeltrick/"><strong>Der Enkeltrick: </strong> <span>Wie Sylwia K. ihre Opfer ausnimmt</span></a></li>
 		<li><a title=" Sondereinheit Tasche:   Trickbetrügern auf der Spur " target="_blank" href="http://www.spiegel.tv/filme/magazin-02122012/"><strong>"Sondereinheit Tasche":</strong> <span>Trickbetrügern auf der Spur</span></a></li>
 		<li><a title=" Auf der Spur der Automafia:   Deutschland, Polen, Litauen " target="_blank" href="http://www.spiegel.tv/filme/magazin-autoklau-polen-litauen/"><strong>Auf der Spur der Automafia:</strong> <span>Deutschland, Polen, Litauen</span></a></li>
 		</ul>
@@ -2329,13 +2329,13 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			<div class="spAssetHdln">Sylvie van der Vaart</div><ul class="spClearFix"><li class="spFirst"><div style="width: 293px; margin-bottom:5px;" class="spArticleImageBox">
 				<a title=" Endgültig ausgewechselt " href="/panorama/leute/sabia-boulahrouz-aus-fuer-rafael-und-sylvie-van-der-vaart-a-893173.html"><img width="291" height="170" border="0" style="float: none;" alt="" title="" src="http://cdn3.spiegel.de/images/image-443276-thumbflexhp-ccen.jpg"></a><div style="width: 293px;">
 						<div align="right" class="spCredit">dapd</div>
-					</div></div>			
+					</div></div>
 
 		<a title=" Endgültig ausgewechselt " href="/panorama/leute/sabia-boulahrouz-aus-fuer-rafael-und-sylvie-van-der-vaart-a-893173.html"><b>Endgültig ausgewechselt</b></a></li>
 		</ul>
 			<div class="spListboxCloser"> </div>
 		</div>
-	<div class="spHtmlbox">			
+	<div class="spHtmlbox">
 		<div class="spAssetHdln"><a title="Börse" target="_blank" href="http://boersen.manager-magazin.de/spo_mmo/">Börse</a></div>
 		<div>
 <div class="spBoerseBox">
@@ -2452,84 +2452,84 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 						<td align="right">7.662,64</td>
 						<td align="right">+3,89</td>
 						<td align="right" class="spNumberPositive">0,05</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow2">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_listen.htm?sektion=mdax">MDax</a></td>
 						<td align="right">12.988,99</td>
 						<td align="right">+66,09</td>
 						<td align="right" class="spNumberPositive">0,51</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow1">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_listen.htm?sektion=tecdax">TecDax</a></td>
 						<td align="right">912,64</td>
 						<td align="right">+9,15</td>
 						<td align="right" class="spNumberPositive">1,01</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow2">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_listen.htm?sektion=estoxx">E-Stoxx</a></td>
 						<td align="right">2.589,25</td>
 						<td align="right">+3,97</td>
 						<td align="right" class="spNumberPositive">0,15</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow1">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_listen.htm?sektion=dj">Dow</a></td>
 						<td align="right">14.613,48</td>
 						<td align="right">+48,23</td>
 						<td align="right" class="spNumberPositive">0,33</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow2">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_listen.htm?sektion=nasdaq100">Nasdaq 100</a></td>
 						<td align="right">2.786,13</td>
 						<td align="right">+14,38</td>
 						<td align="right" class="spNumberPositive">0,52</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow1">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_listen.htm?sektion=nikkei">Nikkei</a> <a href="http://www.spiegel.de/wirtschaft/0,1518,583400,00.html">(late)</a><a></a></td>
 						<td align="right">13.192,59</td>
 						<td align="right">+358,95</td>
 						<td align="right" class="spNumberPositive">2,80</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow2">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_einzelkurs_uebersicht.htm?s=EUR&amp;b=691&amp;l=276">€ in $</a></td>
 						<td align="right">1,3033</td>
 						<td align="right">+0,0014</td>
 						<td align="right" class="spNumberPositive">0,10</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow1">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_einzelkurs_uebersicht.htm?s=EURGBP&amp;b=691&amp;l=276">€ in £</a></td>
 						<td align="right">0,8537</td>
 						<td align="right">+0,0009</td>
 						<td align="right" class="spNumberPositive">0,10</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow2">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_einzelkurs_uebersicht.htm?s=EURCHF&amp;b=691&amp;l=276">€ in sfr</a></td>
 						<td align="right">1,2176</td>
 						<td align="right">+0,0005</td>
 						<td align="right" class="spNumberPositive">0,04</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow1">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_einzelkurs_uebersicht.htm?s=BRENTDAT.RSM&amp;b=400&amp;l=276&amp;n=OIL%20in%20USD">Öl ($)</a> <a href="http://www.spiegel.de/wirtschaft/0,1518,583400,00.html">(late)</a><a></a></td>
 						<td align="right">103,58</td>
 						<td align="right">-0,55</td>
 						<td align="right" class="spNumberNegative">-0,53</td>
-						</tr>	
+						</tr>
 						
 						<tr class="spRow2">
 						<td><a target="Boerse" href="http://boersen.manager-magazin.de/spo_mmo/kurse_einzelkurs_uebersicht.htm?s=USDGOLPM.LFIX&amp;b=401&amp;l=826&amp;n=GOLD%20in%20USD">Gold ($)</a> <a href="http://www.spiegel.de/wirtschaft/0,1518,583400,00.html">(late)</a><a></a></td>
 						<td align="right">1.575,00</td>
 						<td align="right">+7,00</td>
 						<td align="right" class="spNumberPositive">0,45</td>
-						</tr>	
+						</tr>
 						
 	  			</tbody></table>
 	
@@ -2656,7 +2656,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			<div class="spAssetHdln"><a title="Augenblick" target="_self" href="http://www.spiegel.de/thema/augenblick">Augenblick</a></div><ul class="spClearFix"><li class="spFirst"><div style="width: 293px; margin-bottom:5px;" class="spArticleImageBox">
 				<a title=" Schmallippig " href="/panorama/model-bei-fashion-week-in-sydney-schneidet-grimasse-a-893214.html"><img width="291" height="170" border="0" style="float: none;" alt="" title="" src="http://cdn1.spiegel.de/images/image-481630-thumbflexhp-unny.jpg"></a><div style="width: 293px;">
 						<div align="right" class="spCredit">Getty Images</div>
-					</div></div>			
+					</div></div>
 
 		<a title=" Schmallippig " href="/panorama/model-bei-fashion-week-in-sydney-schneidet-grimasse-a-893214.html"><b>Schmallippig</b></a></li>
 		</ul>
@@ -2666,7 +2666,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			<div class="spAssetHdln"><a title="English Site" target="_self" href="http://www.spiegel.de/international/">English Site</a></div><ul class="spClearFix"><li class="spFirst"><div style="width: 122px;" class="spColumnBoxPic">
 				<a title=" Pirates of the Caribbean:    Global Resistance to&nbsp;Tax Havens Grows " href="/international/world/offshore-leaks-gives-boost-to-global-resistance-against-tax-havens-a-892977.html"><img width="120" height="90" border="0" style="" alt="" title="" src="http://cdn1.spiegel.de/images/image-40814-hpcpleftcolumn-dmex.jpg"></a><div style="width: 122px;">
 						<div align="right" class="spCredit">Corbis</div>
-					</div></div>			
+					</div></div>
 
 		<a title=" Pirates of the Caribbean:    Global Resistance to&nbsp;Tax Havens Grows " href="/international/world/offshore-leaks-gives-boost-to-global-resistance-against-tax-havens-a-892977.html"><strong>Pirates of the Caribbean: </strong> <span>Global Resistance to&nbsp;Tax Havens Grows</span></a></li>
 		<li><a title=" Trouble in Paris:    A&nbsp;Crisis of Democracy&nbsp;Rocks the Fifth Republic " href="/international/europe/corruption-scandal-puts-hollande-and-france-on-their-heels-a-892965.html"><strong>Trouble in Paris: </strong> <span>A&nbsp;Crisis of Democracy&nbsp;Rocks the Fifth Republic</span></a></li>
@@ -2678,7 +2678,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			<div class="spAssetHdln">Trivial Pursuit</div><ul class="spClearFix"><li class="spFirst"><div style="width: 293px; margin-bottom:5px;" class="spArticleImageBox">
 				<a title="&nbsp;" target="_self" href="http://www.spiegel.de/netzwelt/games/trivial-pursuit-online-das-wissensspiel-auf-spiegel-online-a-803428.html#id=s1-198"><img width="291" height="170" border="0" style="float: none;" alt="" title="" src="http://cdn1.spiegel.de/images/image-199594-thumbflexhp-rkom.jpg"></a><div style="width: 293px;">
 						<div align="right" class="spCredit">SPIEGEL ONLINE</div>
-					</div></div>			
+					</div></div>
 
 		<a title="&nbsp;" target="_self" href="http://www.spiegel.de/netzwelt/games/trivial-pursuit-online-das-wissensspiel-auf-spiegel-online-a-803428.html#id=s1-198">&nbsp;</a></li>
 		<li><b>Das Wissensspiel auf SPIEGEL ONLINE</b></li>
@@ -2690,7 +2690,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			<div class="spAssetHdln"><a title="Reisetipp des Tages" target="_self" href="http://forum.spiegel.de/public/redirectmarker.php?postid=4962">Reisetipp des Tages</a></div><ul class="spClearFix"><li class="spFirst"><div style="width: 293px; margin-bottom:5px;" class="spArticleImageBox">
 				<a title=" " target="_self" href="http://forum.spiegel.de/public/redirectmarker.php?postid=4962"><img width="291" height="170" border="0" style="float: none;" alt="" title="" src="http://cdn3.spiegel.de/images/image-481652-thumbflexhp-hrkg.jpg"></a><div style="width: 293px;">
 						<div align="right" class="spCredit">Corbis</div>
-					</div></div>			
+					</div></div>
 
 		<a title=" " target="_self" href="http://forum.spiegel.de/public/redirectmarker.php?postid=4962"> </a></li>
 		<li><a title=" Leser antimatter empfiehlt Südafrika-Reisenden einen Abstecher ins Swasiland.&nbsp;  Warum?&nbsp;Steht in der Reisekarte. " target="_self" href="http://forum.spiegel.de/public/redirectmarker.php?postid=4962"><b>Leser antimatter empfiehlt Südafrika-Reisenden einen Abstecher ins Swasiland.&nbsp;</b><span>Warum?&nbsp;Steht in der Reisekarte.</span></a></li>
@@ -2701,15 +2701,15 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 			<div class="spAssetHdln">Wetter-Videos</div><ul class="spClearFix"><li class="spFirst"><div style="width: 293px; margin-bottom:5px;" class="spVideoPic spArticleImageBox">
 				<a title=" Deutschlandwetter " onclick="return spOpenVideo(this,'1264886')" href="/video/video-deutschlandwetter-video-1264886.html"><img width="291" height="170" border="0" style="float: none;" alt="" title="" src="http://cdn3.spiegel.de/images/image-399232-thumbflexhp-uzvx.jpg"><img alt="Video" class="spIEsixPng" src="/static/sys/v9/buttons/but_video_2.png"></a><div style="width: 293px;">
 						<div align="right" class="spCredit">wetter.com</div>
-					</div></div>			
+					</div></div>
 
-		<a title=" Deutschlandwetter " onclick="return spOpenVideo(this,'1264886')" href="/video/video-deutschlandwetter-video-1264886.html"><b>Deutschlandwetter</b></a></li>	
-		<li><a title=" Gesundheitswetter " onclick="return spOpenVideo(this,'1264877')" href="/video/video-gesundheitswetter-video-1264877.html"><b>Gesundheitswetter</b></a></li>	
-		<li><a title=" Reisewetter " onclick="return spOpenVideo(this,'1264885')" href="/video/video-reisewetter-video-1264885.html"><b>Reisewetter</b></a></li>	
+		<a title=" Deutschlandwetter " onclick="return spOpenVideo(this,'1264886')" href="/video/video-deutschlandwetter-video-1264886.html"><b>Deutschlandwetter</b></a></li>
+		<li><a title=" Gesundheitswetter " onclick="return spOpenVideo(this,'1264877')" href="/video/video-gesundheitswetter-video-1264877.html"><b>Gesundheitswetter</b></a></li>
+		<li><a title=" Reisewetter " onclick="return spOpenVideo(this,'1264885')" href="/video/video-reisewetter-video-1264885.html"><b>Reisewetter</b></a></li>
 		</ul>
 			<div class="spListboxCloser"> </div>
 		</div>
-	<div class="spHtmlbox">			
+	<div class="spHtmlbox">
 		<div class="spAssetHdln"><a title="Wetter" href="/extra/a-391374.html">Wetter</a></div>
 		<div>
 
@@ -2763,7 +2763,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 </li>
 </ul></div>
 	</div>
-<div class="spHtmlbox">			
+<div class="spHtmlbox">
 		<div class="spAssetHdln">Folgen Sie uns im Social Web</div>
 		<div>
 <iframe scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:291px; height:62px; margin:0 0 12px -10px;" src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fspiegelonline&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;border_color&amp;stream=false&amp;header=false&amp;height=62" allowtransparency="true"></iframe>
@@ -2785,7 +2785,7 @@ $('#home #spBreadcrumb #spThemenBreadcrumb h2').css( 'cursor', 'pointer' );
 &lt;!--
  OAS_RICH('Position1');
 // --&gt;
-</script><a target="_blank" href="http://adserv.quality-channel.de/RealMedia/ads/click_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Position1"><img border="0" alt="" src="http://adserv.quality-channel.de/RealMedia/ads/adstream_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Position1" class="mzaqxvhbdbywoqgbfexv"></a><div class="spHtmlbox">			
+</script><a target="_blank" href="http://adserv.quality-channel.de/RealMedia/ads/click_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Position1"><img border="0" alt="" src="http://adserv.quality-channel.de/RealMedia/ads/adstream_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Position1" class="mzaqxvhbdbywoqgbfexv"></a><div class="spHtmlbox">
 		<div class="spAssetHdln">SPIEGEL-Bestseller</div>
 		<div>
 <div class="spBestsellerLists">
@@ -2844,7 +2844,7 @@ Herzstoß
 	</div>
 <div class="spListbox spClearFix">
 			<div class="spAssetHdln"><a title="Das dctp Web TV" href="/sptv/dctp/a-623202.html">Das dctp Web TV</a></div><ul class="spClearFix"><li class="spFirst"><div style="width: 122px;" class="spColumnBoxPic">
-				<a title=" Der ärztliche Blick:    Szenen aus der Geschichte der Heilkunst " target="_blank" href="http://www.dctp.tv/filme/news-stories-24032013/"><img width="120" height="90" border="0" style="" alt="" title="" src="http://cdn4.spiegel.de/images/image-479637-hpcpleftcolumn-bnpt.jpg"></a></div>			
+				<a title=" Der ärztliche Blick:    Szenen aus der Geschichte der Heilkunst " target="_blank" href="http://www.dctp.tv/filme/news-stories-24032013/"><img width="120" height="90" border="0" style="" alt="" title="" src="http://cdn4.spiegel.de/images/image-479637-hpcpleftcolumn-bnpt.jpg"></a></div>
 
 		<a title=" Der ärztliche Blick:    Szenen aus der Geschichte der Heilkunst " target="_blank" href="http://www.dctp.tv/filme/news-stories-24032013/"><strong>Der ärztliche Blick: </strong> <span>Szenen aus der Geschichte der Heilkunst</span></a></li>
 		</ul>
@@ -2854,7 +2854,7 @@ Herzstoß
 			<div class="spAssetHdln">Sie wollen Fotos sehen?</div><ul class="spClearFix"><li class="spFirst"><div style="width: 122px;" class="spColumnBoxPic">
 				<a title=" seen.by Fotokunst &amp; Fotolabor:   Künstlerische Fotografie von Profis und Amateuren. Lassen Sie sich inspirieren, oder drucken und präsentieren Sie Ihre eigenen Bilder in Profiqualität. " target="_blank" href="http://www.seen.by"><img width="120" height="90" border="0" style="" alt="" title="" src="http://cdn3.spiegel.de/images/image-457196-hpcpleftcolumn-dpwg.jpg"></a><div style="width: 122px;">
 						<div align="right" class="spCredit">Jens Benninghofen</div>
-					</div></div>			
+					</div></div>
 
 		<a title=" seen.by Fotokunst &amp; Fotolabor:   Künstlerische Fotografie von Profis und Amateuren. Lassen Sie sich inspirieren, oder drucken und präsentieren Sie Ihre eigenen Bilder in Profiqualität. " target="_blank" href="http://www.seen.by"><strong>seen.by Fotokunst &amp; Fotolabor:</strong> <span>Künstlerische Fotografie von Profis und Amateuren. Lassen Sie sich inspirieren, oder drucken und präsentieren Sie Ihre eigenen Bilder in Profiqualität.</span></a></li>
 		</ul>
@@ -2886,18 +2886,18 @@ Herzstoß
 	<div class="test" id="qcRight">
 		<script type="text/javascript">
 		&lt;!--
-		OAS_RICH('Right'); 
+		OAS_RICH('Right');
 		// --&gt;
 		</script><a target="_blank" href="http://adserv.quality-channel.de/RealMedia/ads/click_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Right"><img border="0" alt="" src="http://adserv.quality-channel.de/RealMedia/ads/adstream_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Right" class="mzaqxvhbdbywoqgbfexv"></a><br clear="all" class="spBreakNoHeight">
 	</div>
 	<script type="text/javascript">
 	&lt;!--
-		OAS_RICH('Bottom1'); 
+		OAS_RICH('Bottom1');
 	// --&gt;
 	</script><a target="_blank" href="http://adserv.quality-channel.de/RealMedia/ads/click_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Bottom1"><img border="0" alt="" src="http://adserv.quality-channel.de/RealMedia/ads/adstream_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!Bottom1" class="mzaqxvhbdbywoqgbfexv"></a><br clear="all" class="spBreakNoHeight">
 	<script type="text/javascript">
 	&lt;!--
-		OAS_RICH('TopRight'); 
+		OAS_RICH('TopRight');
 	// --&gt;
 	</script><a target="_blank" href="http://adserv.quality-channel.de/RealMedia/ads/click_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!TopRight"><img border="0" alt="" src="http://adserv.quality-channel.de/RealMedia/ads/adstream_nx.ads/www.spiegel.de/homepage/center/1830288042@Sub1,Sub2,Top1,Top2,TopRight,Left,Right,Right1,Right2,Right3,Right4,Right5,Middle,Middle1,Middle2,Middle3,Bottom,Bottom1,Bottom2,Bottom3,Position1,Position2,x01,x02,x03,x04,x05,x06,x07,x08,x09,x10,x11,x12,x20,x21,x22,x23,x70,VMiddle2,VMiddle,VRight,Spezial!TopRight" class="mzaqxvhbdbywoqgbfexv"></a><br clear="all" class="spBreakNoHeight">
 </div></div>
@@ -2957,7 +2957,7 @@ Eurojackpot
 </span>
 </li>
 
-</ul>  
+</ul>
 
 <!-- AUTO UND FREIZEIT 2 -->
 
@@ -3168,15 +3168,15 @@ Prozesskosten-<br>Rechner
 					<li><a href="/gesundheit/">Gesundheit</a></li>
 					<li><a href="/unispiegel/">Uni</a></li>
 					<li><a href="/schulspiegel/">Schule</a></li>
-					<li><a href="/reise/">Reise</a></li> 
-					<li><a href="/auto/">Auto</a></li> 
+					<li><a href="/reise/">Reise</a></li>
+					<li><a href="/auto/">Auto</a></li>
 					<li><a href="http://wetter.spiegel.de/spiegel/">Wetter</a></li>
 				</ul>
 			</div>
 			<div id="spPageFooterSubNav">
-				<ul class="spFirst">				  
+				<ul class="spFirst">
 					<li><strong>DIENSTE</strong></li>
-					<li><a href="/schlagzeilen/">Schlagzeilen</a></li> 
+					<li><a href="/schlagzeilen/">Schlagzeilen</a></li>
 					<li><a href="/dienste/a-271804.html">RSS</a></li>
 					<li><a href="/dienste/a-352020.html">Newsletter</a></li>
 					<li><a href="/dienste/a-419947.html">Mobil</a></li>
@@ -3196,35 +3196,35 @@ Prozesskosten-<br>Rechner
 					<li><a href="http://www.spiegel-qc.de/selbstbuchungstool">Selbstbuchungstool</a></li>
 					<li><a href="http://www.quality-abo.de/">weitere Zeitschriften</a></li>
 				</ul>
-				<ul>				  
+				<ul>
 					<li><strong>MAGAZINE</strong>
-					</li><li><a href="/spiegel/">DER SPIEGEL</a></li> 
+					</li><li><a href="/spiegel/">DER SPIEGEL</a></li>
 					<li><a href="/deinspiegel/">Dein SPIEGEL</a></li>
 					<li><a href="/spiegelgeschichte/">SPIEGEL GESCHICHTE</a></li>
 					<li><a href="/spiegelwissen/">SPIEGEL WISSEN</a></li>
 					<li><a href="/kulturspiegel/">KulturSPIEGEL</a></li>
 					<li><a href="/spiegel/unispiegel/">UniSPIEGEL</a></li>
 				</ul>
-				<ul>  
-					<li><strong>SPIEGEL GRUPPE</strong></li> 
+				<ul>
+					<li><strong>SPIEGEL GRUPPE</strong></li>
 					<li><a href="http://abo.spiegel.de/?et_cid=7&amp;amp;et_lid=1946&amp;amp;et_sub=footer">Abo</a></li>
-					<li><a href="http://www.spiegel.de/shop">Shop</a></li> 
-					<li><a href="/sptv/">SPIEGEL&nbsp;TV</a></li> 
+					<li><a href="http://www.spiegel.de/shop">Shop</a></li>
+					<li><a href="/sptv/">SPIEGEL&nbsp;TV</a></li>
 					<li><a href="http://www.manager-magazin.de/">manager&nbsp;magazin</a></li>
 					<li><a href="http://www.harvardbusinessmanager.de/">Harvard Business Man.</a></li>
 					<li><a href="http://www.buchreport.de/">buchreport</a></li>
 					<li><a href="http://www.buchaktuell.de/">buch aktuell</a></li>
-					<li><a href="http://www.spiegelgruppe.de/">SPIEGEL-Gruppe</a></li> 
+					<li><a href="http://www.spiegelgruppe.de/">SPIEGEL-Gruppe</a></li>
 				</ul>
-				<ul>  
+				<ul>
 					<li><strong>WEITERE</strong>
-					</li><li><a href="/hilfe/">Hilfe</a></li> 
-					<li><a href="/kontakt/">Kontakt</a></li> 
+					</li><li><a href="/hilfe/">Hilfe</a></li>
+					<li><a href="/kontakt/">Kontakt</a></li>
 					<li><a href="http://www.spiegelgruppe-nachdrucke.de">Nachdrucke</a></li>
 					<li><a href="/dienste/a-639126.html">Datenschutz</a></li>
-					<li><a href="/impressum/">Impressum</a></li> 
-				</ul>		
-			</div>	
+					<li><a href="/impressum/">Impressum</a></li>
+				</ul>
+			</div>
 			<div class="spTop">
 				<a href="#"><span>TOP</span></a>
 			</div>

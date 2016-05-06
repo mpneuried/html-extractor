@@ -5,7 +5,7 @@
 
 # import external modules
 htmlparser = require("htmlparser2")
-_ = require('lodash')
+_isEmpty = require('lodash/isEmpty')
 
 # export extractor class
 module.exports = class HTMLExtractor
@@ -203,7 +203,7 @@ module.exports = class HTMLExtractor
 			onend: =>
 				# if keywords are defined convert it to an array
 				if _ret.meta.keywords?
-					_ret.meta.keywords = for _word in _ret.meta.keywords.split( "," ) when not _.isEmpty( _word )
+					_ret.meta.keywords = for _word in _ret.meta.keywords.split( "," ) when not _isEmpty( _word )
 						@_trim( _word )
 
 				_ret.body = _body.join( " " ).replace( /\s\s+/g, " " )

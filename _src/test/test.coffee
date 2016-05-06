@@ -40,9 +40,9 @@ describe 'HTML-dispatch-TEST', ->
 				should.exist( data.body )
 				data.body.should.not.be.empty
 
-				data.body.should.not.include( "$('#contactform')" )
-				data.body.should.not.include( ".testcssselector" )
-				
+				data.body.should.not.containEql( "$('#contactform')" )
+				data.body.should.not.containEql( ".testcssselector" )
+				data.body.should.not.containEql( "</" )
 				#console.log data.meta, data.body.length, data.h1
 				done()
 				return
@@ -58,6 +58,7 @@ describe 'HTML-dispatch-TEST', ->
 				should.exist( data.meta.title )
 				data.meta.title.should.equal("SPIEGEL ONLINE - Nachrichten")
 				should.exist( data.body )
+				data.body.should.not.containEql( "</" )
 				data.body.should.not.be.empty
 				
 				#console.log data.meta, data.body.length, data.h1
@@ -71,15 +72,16 @@ describe 'HTML-dispatch-TEST', ->
 		it "test get HTML", ( done )->
 
 			getHTML testData.links[ 0 ], ( html )->
-				html.should.be.a( "string" )
+				html.should.be.a.String()
 				html.length.should.be.above( 0 )
-				html.should.include( "Team Centric Software GmbH" )
+				html.should.containEql( "Team Centric Software GmbH" )
 				done()
 				return
 			return
 
 	describe 'Test Parser with multiple pages', ->
-		for _link, idx in testData.links[ 0..5 ]
+		_count = process.env.COUNT or 5
+		for _link, idx in testData.links[ 0.._count ]
 			do( _link )->
 				it "#{ idx }: Parse '#{ _link }'", ( done )->
 
@@ -91,6 +93,7 @@ describe 'HTML-dispatch-TEST', ->
 							should.exist( data.meta )
 							should.exist( data.meta.title )
 							should.exist( data.body )
+							data.body.should.not.containEql( "</" )
 							data.body.should.not.be.empty
 							
 							#console.log "\nHEADER of #{ _link }\n", data.meta.title, "\n", JSON.stringify( data.meta, true, 2 ), "\n", JSON.stringify( data.h1, true, 2 )
@@ -115,18 +118,19 @@ describe 'HTML-dispatch-TEST', ->
 							should.exist( data.meta.title )
 							should.exist( data.body )
 							data.body.should.not.be.empty
+							data.body.should.not.containEql( "</" )
 
 							switch idx
 								when 0
-									data.body.should.not.include "EDV-Downloadbereich"
-									data.body.should.not.include "Spitalgasse 31"
+									data.body.should.not.containEql "EDV-Downloadbereich"
+									data.body.should.not.containEql "Spitalgasse 31"
 
-									data.body.should.include "Herzlich willkommen im APO-Shop"
+									data.body.should.containEql "Herzlich willkommen im APO-Shop"
 								when 1
-									data.body.should.not.include "steht zum Verkauf"
-									data.body.should.not.include "Preis: Verhandlungsbasis"
+									data.body.should.not.containEql "Impressum"
+									data.body.should.not.containEql "Haftungsausschluss"
 
-									data.body.should.include "Sichtbarkeit mit e-sparschwein.de"
+									data.body.should.containEql "Geschäftsführung"
 							
 							#console.log "\nBody of #{  _reduce.url }\n", data.body
 
@@ -136,5 +140,3 @@ describe 'HTML-dispatch-TEST', ->
 					return
 
 	
-
-

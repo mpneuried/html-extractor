@@ -3,7 +3,7 @@ module.exports = (grunt) ->
 	# Project configuration.
 	grunt.initConfig
 		pkg: grunt.file.readJSON("package.json")
-		regarde:
+		watch:
 			lib:
 				files: ["_src/lib/*.coffee"]
 				tasks: [ "coffee:lib" ]
@@ -35,21 +35,20 @@ module.exports = (grunt) ->
 				reporter: "spec"
 				#bail: true
 				timeout: 10000
+				env:
+					COUNT: process.env.COUNT
 
 			all: [ "test/test.js" ]
-
-
-	# just a hack until this issue has been fixed: https://github.com/yeoman/grunt-regarde/issues/3
-	grunt.option('force', not grunt.option('force'))
+			
 
 	# Load npm modules
-	grunt.loadNpmTasks "grunt-regarde"
+	grunt.loadNpmTasks "grunt-contrib-watch"
 	grunt.loadNpmTasks "grunt-contrib-coffee"
 	grunt.loadNpmTasks "grunt-mocha-cli"
 
 	# ALIAS TASKS
 	grunt.registerTask "watch", "regarde"
 	grunt.registerTask "default", "build"
-	grunt.registerTask "test", [ "mochacli" ]
+	grunt.registerTask "test", [ "build", "mochacli" ]
 
 	grunt.registerTask "build", [ "coffee" ]

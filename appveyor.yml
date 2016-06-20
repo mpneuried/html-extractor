@@ -20,8 +20,7 @@ install:
   # Get the latest stable version of Node 0.STABLE.latest
   - ps: Install-Product node $env:nodejs_version
   # Typical npm stuff. Use msvs 2013 for the hiredis parser
-  - npm install<% if( useredis ){ %>
-  - npm install hiredis --msvs_version=2013<% } %>
+  - npm install
   - npm install -g grunt-cli
   - grunt build
 

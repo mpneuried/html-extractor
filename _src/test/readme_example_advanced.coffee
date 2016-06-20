@@ -23,6 +23,26 @@ html = """
 			<p>Lorem ipsum dolor sit amet ... </p>
 			<h1>Second article</h1>
 			<p>Aenean commodo ligula eget dolor.</p>
+			<section class="abc">
+				<h3>ABC 1</h3>
+				<p>Lorem ipsum dolor sit amet ... </p>
+			</section>
+			<section class="xyz">
+				<h3>XYZ 1</h3>
+				<p>Lorem ipsum dolor sit amet ... </p>
+			</section>
+			<section class="abc">
+				<h3>ABC 2</h3>
+				<p>Lorem ipsum dolor sit amet ... </p>
+			</section>
+			<section class="xyz">
+				<h3>XYZ 2</h3>
+				<p>Lorem ipsum dolor sit amet ... </p>
+			</section>
+			<section class="abc">
+				<h3>ABC 3</h3>
+				<p>Lorem ipsum dolor sit amet ... </p>
+			</section>
 			<script>
 				var superVar = [ 3,2,1 ]
 			</script>
@@ -34,7 +54,7 @@ html = """
 </html>
 """
 
-reduceTo = 
+reduceTo =
 	tag: "div"
 	attr: "id"
 	val: "content"
@@ -54,4 +74,29 @@ myExtrator.extract html, reduceTo, ( err, data )->
 		# 	body: ' First article Lorem ipsum dolor sit amet ... Second article Aenean commodo ligula eget dolor. ',
 		# 	h1: ['My super page2', 'First article', 'Second article']
 		# }
+		
+	
+	reduceTo2 =
+		tag: "section"
+		attr: "class"
+		val: "abc"
+		list: true
+
+	myExtrator.extract html, reduceTo2, ( err, data )->
+		if err
+			throw err
+		else
+			console.log data
+			# {
+			# 	meta: {
+			# 		title: 'Super page',
+			# 		description: 'Look at this super page',
+			# 		keywords: ['X', 'Y', 'Z'],
+			# 		generator: 'Super pageCMS'
+			# 	},
+			# 	body: ' First article Lorem ipsum dolor sit amet ... Second article Aenean commodo ligula eget dolor. ',
+			# 	h1: ['My super page2', 'First article', 'Second article']
+			# }
+		return
+	
 	return

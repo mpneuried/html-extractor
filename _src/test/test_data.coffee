@@ -1,9 +1,9 @@
 module.exports =
 	links: [
 		"http://www.tcs.de/"
-		"http://www.guenstig-selberkochen.de/"
+		#"http://www.guenstig-selberkochen.de/"
 		"http://www.spiegel.de/"
-		"http://www.massivkonzept.de/"
+		#"http://www.massivkonzept.de/"
 		"http://www.shopsuey.de/"
 		"http://www.easyyoungfashion.de/"
 		"http://www.insiderooms.de/"
@@ -29,7 +29,7 @@ module.exports =
 		"http://www.placidrevival.com/"
 		"http://www.4attheclub.de/"
 		"http://www.jephly.de/jephly/About.html"
-		"http://www.nehlsundgeiger.de/"
+		#"http://www.nehlsundgeiger.de/"
 		"http://www.strawberrybeat.de/"
 		"http://www.berlin-jazzband.de/"
 		"http://www.my-flexible-friends.de/"
@@ -37,7 +37,7 @@ module.exports =
 		"http://www.jazzband-berlin.eu/"
 		"http://www.candlelightjazz.de/"
 		"http://www.kuyaband.com/"
-		"http://www.liveband-thueringen.de/"
+		#"http://www.liveband-thueringen.de/"
 		"http://www.plugandplay-band.de/"
 		"http://www.swingshot.de/"
 		"http://www.ines-weber.de/"
@@ -50,7 +50,7 @@ module.exports =
 		#"http://www.handy-iphone-simlock.com/"
 		"http://www.buddha.envy.nu/"
 		"http://www.london.dreamstation.com/"
-		"http://berlin.7hostfree.com/"
+		#"http://berlin.7hostfree.com/"
 		"http://www.solarlichtladen.de/"
 		"http://www.djs4events.de/"
 		"http://www.vemoi.de/"
@@ -61,7 +61,7 @@ module.exports =
 		"http://www.urlaubtipps.net/"
 		"http://www.urlaubsreise-finden.de/"
 		"http://www.malta-urlaub.at/"
-		"http://italienisch-tourismus.com/"
+		#"http://italienisch-tourismus.com/"
 		"http://www.hotelgritti.it/deu/preise.html"
 		"http://www.hotelmirafiori.com/jesolostrand.htm"
 		"http://www.seductive-lifestyle.de/"
@@ -72,8 +72,8 @@ module.exports =
 		"http://www.smartdoktor.de/"
 		"http://www.downloadflatrate.com/"
 		#"http://e-sparschwein.de/"
-		"http://www.guenstig-selberkochen.de/"
-		"http://www.found4you.de/geschenkideen/hochzeitsgeschenke.html"
+		#"http://www.guenstig-selberkochen.de/"
+		#"http://www.found4you.de/geschenkideen/hochzeitsgeschenke.html"
 		"http://www.djs4events.de/"
 		"http://www.lalipop.de/"
 		"http://www.danceup.ch/"
@@ -94,6 +94,9 @@ module.exports =
 	,
 		url: "http://www.tcs.de/impress.html"
 		reduced: { tag: "div", attr: "class", val: "cm-sidebar" }
+	,
+		url: "http://www.tcs.de/technology.html"
+		reduced: { tag: "div", attr: "class", val: "cm-content-item-article", list: true }
 	]
 
 	html: [

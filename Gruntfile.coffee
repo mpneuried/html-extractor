@@ -5,23 +5,17 @@ module.exports = (grunt) ->
 		pkg: grunt.file.readJSON("package.json")
 		watch:
 			lib:
-				files: ["_src/lib/*.coffee"]
-				tasks: [ "coffee:lib" ]
-			test:
-				files: ["_src/test/*.coffee"]
-				tasks: [ "coffee:test" ]
+				files: ["_src/**/*.coffee"]
+				tasks: [ "coffee:base" ]
+			module_test:
+				files: [ "_src/**/*.coffee" ]
+				tasks: [ "coffee:base", "test" ]
 			
 		coffee:
-			lib:
+			base:
 				expand: true
 				cwd: '_src',
-				src: ["lib/*.coffee"]
-				dest: ""
-				ext: ".js"
-			test:
-				expand: true
-				cwd: '_src',
-				src: ["test/*.coffee"]
+				src: ["**/*.coffee"]
 				dest: ""
 				ext: ".js"
 
@@ -33,7 +27,7 @@ module.exports = (grunt) ->
 			options:
 				require: [ "should" ]
 				reporter: "spec"
-				#bail: true
+				bail: if process.env.BAIL? then true else false
 				timeout: 10000
 				env:
 					COUNT: process.env.COUNT
@@ -47,8 +41,14 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks "grunt-mocha-cli"
 
 	# ALIAS TASKS
-	grunt.registerTask "watch", "regarde"
 	grunt.registerTask "default", "build"
 	grunt.registerTask "test", [ "build", "mochacli" ]
+	grunt.registerTask( "watch-test", [ "watch:module_test" ] )
 
-	grunt.registerTask "build", [ "coffee" ]
+	# ALIAS SHORTS
+	grunt.registerTask( "b", "build" )
+	grunt.registerTask( "w", "watch:lib" )
+	grunt.registerTask( "wt", "watch-test" )
+	grunt.registerTask( "t", "test" )
+
+	grunt.registerTask "build", [ "coffee:base" ]

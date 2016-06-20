@@ -107,7 +107,7 @@ describe 'HTML-dispatch-TEST', ->
 
 	describe 'Test reducing', ->
 		for _reduce, idx in testData.reduce
-			do( _reduce )->
+			do( _reduce, idx )->
 				it "#{ idx }: Reduced parse '#{ _reduce.url }'", ( done )->
 					getHTML _reduce.url, ( html )->
 
@@ -118,19 +118,26 @@ describe 'HTML-dispatch-TEST', ->
 							should.exist( data.meta.title )
 							should.exist( data.body )
 							data.body.should.not.be.empty
-							data.body.should.not.containEql( "</" )
-
 							switch idx
 								when 0
+									data.body.should.be.instanceof( String )
+									data.body.should.not.containEql( "</" )
 									data.body.should.not.containEql "EDV-Downloadbereich"
 									data.body.should.not.containEql "Spitalgasse 31"
 
 									data.body.should.containEql "Herzlich willkommen im APO-Shop"
 								when 1
+									data.body.should.be.instanceof( String )
+									data.body.should.not.containEql( "</" )
 									data.body.should.not.containEql "Impressum"
 									data.body.should.not.containEql "Haftungsausschluss"
 
 									data.body.should.containEql "Geschäftsführung"
+								
+								when 2
+									data.body.should.be.instanceof( Array )
+									data.body.should.have.length( 11 )
+									data.body[ 0 ].should.startWith "Dynamo DB"
 							
 							#console.log "\nBody of #{  _reduce.url }\n", data.body
 
@@ -138,5 +145,7 @@ describe 'HTML-dispatch-TEST', ->
 							return
 						return
 					return
+				return
+			
 
 	

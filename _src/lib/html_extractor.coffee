@@ -1,5 +1,5 @@
 # # HTMLExtractor
-# 
+#
 # Extract meta-data from a html string.
 # It extracts the body, title, meta-tags and first headlines to a object to push them to a search indexer like elastic-search
 
@@ -33,9 +33,9 @@ module.exports = class HTMLExtractor
 	
 	Trim method to remove whitespace
 	
-	@param { String } [str=""] String to trim 
+	@param { String } [str=""] String to trim
 	
-	@return { String } Trimmed string 
+	@return { String } Trimmed string
 	
 	@api private
 	###
@@ -57,20 +57,16 @@ module.exports = class HTMLExtractor
 	
 	Main method to extract the contens out of a html string
 	
-	@param { String } html Raw html string to extract the meta, title and body 
+	@param { String } html Raw html string to extract the meta, title and body
 	@param { Object } [reduce] Reduce config object to reduce the body results to a specific element. Example: `{ tag: "div", attr: "id", val: "myContent" }`
-	@param { Function } reduce Callback function 
+	@param { Function } reduce Callback function
 	
 	@api public
 	###
-	extract: =>
-		# dispatch the arguments
-		[ args..., cb ] = arguments
-		[ html, reduce ] = args
-
+	extract: ( [ html, reduce ]..., cb  )=>
 		# default return Object
 		_ret =
-			meta: 
+			meta:
 				title: ""
 				description: ""
 				keywords: ""
@@ -78,7 +74,7 @@ module.exports = class HTMLExtractor
 			h1: []
 		
 		# init benchmarking on `debug = true`
-		console.time( "parse Time" ) if @debug
+		console.time( "\t\tparse Time" ) if @debug
 
 		# run extractor
 		@_extract html, _ret, reduce,( err, data )=>
@@ -86,7 +82,7 @@ module.exports = class HTMLExtractor
 				cb( err )
 				return
 			# return time on `debug = true`
-			console.timeEnd( "parse Time" ) if @debug
+			console.timeEnd( "\t\tparse Time" ) if @debug
 
 			cb( null, data )
 			return
@@ -97,10 +93,15 @@ module.exports = class HTMLExtractor
 		# check the reduce config and disable it if one key is missing
 		if not reduce?.tag? or not reduce.attr?  or not reduce.val?
 			reduce = null
+		
+		if reduce?.list?
+			reduce.list = true
 
 		# set some flags
 		_bodyMode = false
 		_scriptMode = false
+		_reducedBody = []
+		_reducedBodyIdx = 0
 		_reduce_stack = null
 		_body = []
 		_currTag = null
@@ -112,11 +113,11 @@ module.exports = class HTMLExtractor
 		parser = new htmlparser.Parser(
 
 			# event on tag open
-			onopentag: ( name, attr )=>
+			onopentag: ( name, attr )->
 				_currTag = name
-
 				# check and start the reduced section by saving the current start stack. The collectin will be done within the `ontext` event.
-				if reduce? and reduce.tag is name and attr[ reduce.attr ] is reduce.val
+				if reduce? and reduce.tag is name and attr[ reduce.attr ]?.indexOf( reduce.val ) >= 0
+					_reducedBody[ _reducedBodyIdx ] = ""
 					_reduce_stack = parser._stack.slice( 0,-1 ).join( "§§" )
 
 				switch name
@@ -132,7 +133,7 @@ module.exports = class HTMLExtractor
 						else if attr? and attr.charset?
 							_ret.meta.charset = attr.charset
 
-					# start the body section to activate the text body collector 
+					# start the body section to activate the text body collector
 					when "body"
 						_bodyMode = true
 						_startBody = parser._tokenizer._index
@@ -155,6 +156,7 @@ module.exports = class HTMLExtractor
 					# if reduce is active only push to the body if a stack is defined
 					if reduce? and _reduce_stack?
 						_body.push( text )
+						_reducedBody[ _reducedBodyIdx ] += text
 					else if not reduce?
 						_body.push( text )
 
@@ -173,16 +175,17 @@ module.exports = class HTMLExtractor
 				switch _currTag
 					# save the content of the title tag to the meta object
 					when "title"
-						_ret.meta.title += text 
+						_ret.meta.title += text
 
 				return
 				
 			# event on tag close
-			onclosetag: ( name )=>
+			onclosetag: ( name )->
 				_currTag = null
 
 				# check if the stack matches the stack on reduce start and stop an active reduce section
 				if _reduce_stack? and _reduce_stack is parser._stack.join( "§§" )
+					_reducedBodyIdx++
 					_reduce_stack = null
 
 				switch name
@@ -205,8 +208,15 @@ module.exports = class HTMLExtractor
 				if _ret.meta.keywords?
 					_ret.meta.keywords = for _word in _ret.meta.keywords.split( "," ) when not _isEmpty( _word )
 						@_trim( _word )
-
-				_ret.body = _body.join( " " ).replace( /\s\s+/g, " " )
+				
+				if reduce?.list?
+					_ret.body = []
+					for _redTxt in _reducedBody
+						_redTxt = @_trim( _redTxt ).replace( /\s\s+/g, " " )
+						if _redTxt.length
+							_ret.body.push _redTxt
+				else
+					_ret.body = _body.join( " " ).replace( /\s\s+/g, " " )
 				
 				cb( null, _ret )
 				return

@@ -34,7 +34,7 @@
     "lodash": "4.x"
   },
   "devDependencies": {
-    "should": "8.x",
+    "should": "9.x",
     "request": "2.x",
     "grunt-contrib-watch": "*",
     "grunt-contrib-coffee": "1.x",

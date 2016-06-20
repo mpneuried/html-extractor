@@ -2,28 +2,26 @@ html-extractor
 ==============
 
 [![Build Status](https://secure.travis-ci.org/mpneuried/html-extractor.png?branch=master)](http://travis-ci.org/mpneuried/html-extractor)
+[![Windows Tests](https://img.shields.io/appveyor/ci/mpneuried/html-extractor.svg?label=Windows%20Test)]()
+[![Dependency Status](https://david-dm.org/mpneuried/html-extractor.png)](https://david-dm.org/mpneuried/html-extractor)
+[![NPM version](https://badge.fury.io/js/html-extractor.png)](http://badge.fury.io/js/html-extractor)
 
 Extract meta-data from a html string. It extracts the body, title, meta-tags and first headlines to a object to push them to a search indexer like elastic-search
 
-## Documentation in progress
-
-*Written in coffee-script*
-
-**INFO: all examples are written in coffee-script**
-
+[![NPM](https://nodei.co/npm/html-extractor.png?downloads=true&stars=true)](https://nodei.co/npm/html-extractor/)
 
 ## Install
 
 ```
-  npm install html-extractor
+	npm install html-extractor
 ```
 
 ## Initialize
 
 
-```coffee
-Extrator = require("html-extractor")
-myExtrator = new Extrator()
+```js
+var Extrator = require("html-extractor");
+var myExtrator = new Extrator();
 ```
 
 ### `new Extrator( debug )`
@@ -50,6 +48,8 @@ A object to reduce the content of body to a specific site content. It is not pos
 	The attribute of the html element to reduce to
 	- **reduced.val** : *( `String` required if `reduced` is set )*  
 	The attribute value of the html element to reduce to
+	- **reduced.list** : *( `Boobean` default = `false` )*  
+	Return every found reduced block as an array within body.
 - **cb** : *( `Function` required )*  
 The callback function
 
@@ -59,8 +59,9 @@ The callback function
 Error information. If no error occoured this will be `null`
 - **data** : *( `Object` )*  
 The extraction result
-	- **data.body** : *( `String` )*  
+	- **data.body** : *( `String|Array` )*  
 	The whole body content or the content within the configured reduced element. There will be just the text content without html tags/attributes and without the content in script tags.
+	If the reduced feature is used and `reduced.list = true` the body will be an array of all found reduced blocks.  
 	- **data.h1** : *( `Array` )*  
 	An array containing all `h1` text contents. Including the `h1`elements outside the configured reduced element 
 	- **data.meta** : *( `Object` )*  
@@ -80,12 +81,12 @@ The extraction result
 
 This is a simple example to extarct the content of a html document
 
-```coffee
-Extrator = require("html-extractor")
-myExtrator = new Extrator()
+```js
+var Extrator = require("html-extractor");
+var myExtrator = new Extrator();
 
-html = """
-<html>
+var html = `
+<html> 
 	<head>
 		<title>Testpage</title>
 	</head>
@@ -94,39 +95,38 @@ html = """
 		<p>Content</p>
 	</body>
 </html>
-"""
+`
 
-myExtrator.extract html, ( err, data )->
-	if err
-		throw err
-	else
-		console.log data
-		# {
-		# 	meta: {
-		# 		title: 'Testpage',
-		#		description: '',
-		#		keywords: []
-		#	},
-		#	body: ' Header 1 Content ',
-		#	h1: [ 'Header 1' ]
-		# }
-	return
-
-
+myExtrator.extract( html, function( err, data ){
+	if( err ){
+		throw( err )
+    } else {
+		console.log( data );
+		// {
+		// 	meta: {
+		// 		title: 'Testpage',
+		//		description: '',
+		//		keywords: []
+		//	},
+		//	body: ' Header 1 Content ',
+		//	h1: [ 'Header 1' ]
+		// }
+    }
+});
 ```
 
-*see `test/readme_example_simple`*
+> see `test/readme_example_simple` or [run in Tonic](https://tonicdev.com/mpneuried/5767a1b1444f3a1400e793c2)
 
 ### advanced
 
 This is a advanced example to show the usage of the reducing.
 With the reduce feature it is possible to reduce the body content to the content of a specific html element.
 
-```coffee
-Extrator = require("html-extractor")
-myExtrator = new Extrator()
+```js
+var Extrator = require("html-extractor");
+var myExtrator = new Extrator();
 
-html = """
+var html = `
 <html>
 	<head>
 		<title>Super page</title>
@@ -152,71 +152,101 @@ html = """
 				var superVar = [ 3,2,1 ]
 			</script>
 		</div>
+		<section class="abc">
+			<h3>ABC 1</h3>
+			<p>Lorem ipsum dolor sit amet ... </p>
+		</section>
+		<section class="xyz">
+			<h3>XYZ 1</h3>
+			<p>Lorem ipsum dolor sit amet ... </p>
+		</section>
+		<section class="abc">
+			<h3>ABC 2</h3>
+			<p>Lorem ipsum dolor sit amet ... </p>
+		</section>
 		<div id="footer">
 			Copyright 2013
 		</div>
 	</body>
 </html>
-"""
+`
 
-reduceTo = 
-	tag: "div"
-	attr: "id"
+var reduceTo = {
+	tag: "div",
+	attr: "id",
 	val: "content"
+}
 
-myExtrator.extract html, reduceTo, ( err, data )->
-	if err
-		throw err
-	else
-		console.log data
-		# {
-		# 	meta: {
-		# 		title: 'Super page',
-		# 		description: 'Look at this super page',
-		# 		keywords: ['X', 'Y', 'Z'],
-		# 		generator: 'Super pageCMS'
-		# 	},
-		# 	body: ' First article Lorem ipsum dolor sit amet ... Second article Aenean commodo ligula eget dolor. ',
-		# 	h1: ['My super page2', 'First article', 'Second article']
-		# }
-	return
+myExtrator.extract( html, reduceTo, function( err, data ){
+	if( err ){
+		throw( err )
+	} else {
+		console.log( "String", data );
+		//{
+		//	meta: {
+		//		title: 'Super page',
+		//		description: 'Look at this super page',
+		//		keywords: ['X', 'Y', 'Z'],
+		//		generator: 'Super pageCMS'
+		//	},
+		//	body: 'First article Lorem ipsum dolor sit amet ... Second article Aenean commodo ligula eget dolor. ',
+		//	h1: ['My super page2', 'First article', 'Second article']
+		//}
+	}
+});
 
+var reduceToList = {
+	tag: "div",
+	attr: "id",
+	val: "content",
+	list: true
+}; 
+
+myExtrator.extract( html, reduceToList, function( err, data ){
+	if( err ){
+		throw( err )
+	} else {
+		console.log( "List", data );
+		//{
+		//	meta: {
+		//		title: 'Super page',
+		//		description: 'Look at this super page',
+		//		keywords: ['X', 'Y', 'Z'],
+		//		generator: 'Super pageCMS'
+		//	},
+		//	body: [
+		//		'ABC 1 Lorem ipsum dolor sit amet ... ',
+		//		'ABC 2 Lorem ipsum dolor sit amet ... '
+		//	],
+		//	h1: ['My super page2', 'First article', 'Second article']
+		//}
+	}
+});
 ```
 
-*see `test/readme_example_advanced`*
+> see `test/readme_example_advanced` or [run in Tonic](https://tonicdev.com/mpneuried/5767a178b29b431300aeb02f)
 
 ## Work in progress
 
 `html-extractor` is work in progress. Your ideas, suggestions etc. are very welcome.
 
-## Changelog
+## Release History
+|Version|Date|Description|
+|:--:|:--:|:--|
+|0.2.0|2016-06-20|Added option to return reduced elements as list; Fixed reduced value check for classes; Optimized dev env.|
+|0.1.4|-|Updated and pinned dependencies and optimized tests|
+|0.1.3|-|Fixed extraction to remove style-tag content|
+|0.1.2|-|Updated documentation|
+|0.1.1|-|Added raw documentation; Fixed `travis.yml` |
+|0.1.0|-|Initial version|
 
-#### `0.1.4`
-
-* Updated and pinned dependencies and optimized tests
-
-#### `0.1.3`
-
-* Fixed extraction to remove style-tag content
-
-#### `0.1.2`
-
-* Updated documentation
-
-#### `0.1.1`
-
-* Added raw documentation
-* Fixed `travis.yml`
-
-#### `0.1.0`
-
-* Initial version
+[![NPM](https://nodei.co/npm-dl/html-extractor.png?months=6)](https://nodei.co/npm/html-extractor/)
 
 ## License 
 
 (The MIT License)
 
-Copyright (c) 2010 TCS &lt;dev (at) tcs.de&gt;
+Copyright (c) 2016 M. Peter, http://www.tcs.de
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

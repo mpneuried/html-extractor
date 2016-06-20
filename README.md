@@ -2,7 +2,7 @@ html-extractor
 ==============
 
 [![Build Status](https://secure.travis-ci.org/mpneuried/html-extractor.png?branch=master)](http://travis-ci.org/mpneuried/html-extractor)
-[![Windows Tests](https://img.shields.io/appveyor/ci/mpneuried/html-extractor.svg?label=Windows%20Test)]()
+[![Windows Tests](https://img.shields.io/appveyor/ci/mpneuried/html-extractor.svg?label=Windows%20Test)](https://ci.appveyor.com/project/mpneuried/html-extractor)
 [![Dependency Status](https://david-dm.org/mpneuried/html-extractor.png)](https://david-dm.org/mpneuried/html-extractor)
 [![NPM version](https://badge.fury.io/js/html-extractor.png)](http://badge.fury.io/js/html-extractor)
 

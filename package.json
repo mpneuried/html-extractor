@@ -4,7 +4,7 @@
   "version": "0.2.1",
   "homepage": "https://github.com/mpneuried/html-extractor",
   "keywords": [
-    "html", "parse", "extract", "body", "search", "tool", "elasic"
+    "html", "parse", "extract", "body", "search", "tool", "elastic", "headlines", "meta", "data"
   ],
   "author": {
     "name": "Mathias Peter"

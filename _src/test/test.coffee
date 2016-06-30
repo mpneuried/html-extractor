@@ -170,6 +170,31 @@ describe 'HTML-dispatch-TEST', ->
 			return
 
 		return
+
+		it "#3 str.replace is not a function when using reduce with list: true", ( done )->
+			_html = '<body><p id="indexable">term one</p><p>non indexable content</p><p id="indexable">term two</p></body>'
+			_exp =
+				meta:
+					title: ""
+					description: ""
+					keywords: []
+				body: ["term one", "term two"]
+				h1: []
+			_reduce =
+				tag: "p"
+				attr: "id"
+				val: "indexable"
+				list: true
+
+			_extractor.extract _html, _reduce, ( err, data )->
+				if err
+					throw err
+				should.exist( data )
+				data.should.eql( _exp )
+				done()
+				return
+			return
+
 	
 	return
 

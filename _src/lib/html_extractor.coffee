@@ -87,7 +87,7 @@ module.exports = class HTMLExtractor
 			# trim results
 			_ret.meta.title = @_trim( _ret.meta.title ) if _ret.meta?.title?.length
 			_ret.meta.description = @_trim( _ret.meta.description ) if _ret.meta?.description?.length
-			_ret.body = @_trim( _ret.body ) if _ret.body?.length
+			_ret.body = @_trim( _ret.body ) if typeof _ret.body is 'string' && _ret.body?.length
 			for _h, idx in _ret.h1 when _h?.length
 				_ret.h1[ idx ] = @_trim( _h )
 

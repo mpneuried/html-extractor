@@ -36,7 +36,7 @@ describe 'HTML-dispatch-TEST', ->
 
 				should.exist( data.meta )
 				should.exist( data.meta.title )
-				data.meta.title.should.equal("TCS: Team Centric Software GmbH &amp; Co. KG")
+				data.meta.title.should.equal("TCS: Team Centric Software GmbH & Co. KG")
 				should.exist( data.body )
 				data.body.should.not.be.empty
 
@@ -146,6 +146,31 @@ describe 'HTML-dispatch-TEST', ->
 						return
 					return
 				return
-			
+			return
+		return
+
+	describe 'Issues', ->
+		it "#1 Returned body contains html entities", ( done )->
+			_html = '<body><p>&nbsp;HELLO!&nbsp;</p><h1>&nbsp;Headline &gt; &lt; &euro;&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;&nbsp;</h1></body>'
+			_exp =
+				meta: 
+					title: ""
+					description: ""
+					keywords: []
+				body: "HELLO! Headline > < € ..."
+				h1: [  "Headline > < €   ..." ]
+
+			_extractor.extract _html, ( err, data )->
+				if err
+					throw err
+				should.exist( data )
+				data.should.eql( _exp )
+				done()
+				return
+			return
+
+		return
+	
+	return
 
 	

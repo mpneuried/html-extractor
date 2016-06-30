@@ -34,7 +34,8 @@ Output the parsing time
 
 ### Extrator.extract( html[, reduced], cb )
 
-Call `.extract()` to get the data of an html string
+Call `.extract()` to get the data of an html string.  
+HTML entities will be decoded.
 
 **arguments:**
 
@@ -144,9 +145,9 @@ var html = `
 			<li>Second</li>
 		</ul>
 		<div id="content">
-			<h1>First article</h1>
+			<h1>First article &euro;</h1>
 			<p>Lorem ipsum dolor sit amet ... </p>
-			<h1>Second article</h1>
+			<h1>Second article&nbsp;&nbsp;...&nbsp;&nbsp;</h1>
 			<p>Aenean commodo ligula eget dolor.</p>
 			<script>
 				var superVar = [ 3,2,1 ]
@@ -189,8 +190,8 @@ myExtrator.extract( html, reduceTo, function( err, data ){
 		//		keywords: ['X', 'Y', 'Z'],
 		//		generator: 'Super pageCMS'
 		//	},
-		//	body: 'First article Lorem ipsum dolor sit amet ... Second article Aenean commodo ligula eget dolor. ',
-		//	h1: ['My super page2', 'First article', 'Second article']
+		//	body: 'First article € Lorem ipsum dolor sit amet ... Second article  ... Aenean commodo ligula eget dolor. ',
+		//	h1: ['My super page2', 'First article €', 'Second article  ...']
 		//}
 	}
 });
@@ -233,6 +234,7 @@ myExtrator.extract( html, reduceToList, function( err, data ){
 ## Release History
 |Version|Date|Description|
 |:--:|:--:|:--|
+|0.2.1|2016-06-30|Fixed handling of html entities #1. Thanks to [Javier Castro](https://github.com/jacargentina)|
 |0.2.0|2016-06-20|Added option to return reduced elements as list; Fixed reduced value check for classes; Optimized dev env.|
 |0.1.4|-|Updated and pinned dependencies and optimized tests|
 |0.1.3|-|Fixed extraction to remove style-tag content|

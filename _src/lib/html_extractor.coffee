@@ -77,12 +77,19 @@ module.exports = class HTMLExtractor
 		console.time( "\t\tparse Time" ) if @debug
 
 		# run extractor
-		@_extract html, _ret, reduce,( err, data )=>
+		@_extract html, _ret, reduce, ( err, data )=>
 			if err
 				cb( err )
 				return
 			# return time on `debug = true`
 			console.timeEnd( "\t\tparse Time" ) if @debug
+
+			# trim results
+			_ret.meta.title = @_trim( _ret.meta.title ) if _ret.meta?.title?.length
+			_ret.meta.description = @_trim( _ret.meta.description ) if _ret.meta?.description?.length
+			_ret.body = @_trim( _ret.body ) if _ret.body?.length
+			for _h, idx in _ret.h1 when _h?.length
+				_ret.h1[ idx ] = @_trim( _h )
 
 			cb( null, data )
 			return
@@ -111,7 +118,6 @@ module.exports = class HTMLExtractor
 
 		# allwasy create a instance of htmlparser2 to prevent race conditions through a possible instance parser value
 		parser = new htmlparser.Parser(
-
 			# event on tag open
 			onopentag: ( name, attr )->
 				_currTag = name
@@ -164,9 +170,9 @@ module.exports = class HTMLExtractor
 				if _h1Open
 					# on subtag in the h1 tag the `_h1LastOpen` will be true so the sub tag content will be added to the latest h1 element
 					if _h1LastOpen
-						_ret.h1[ _ret.h1.length - 1 ] += @_trim( text )
+						_ret.h1[ _ret.h1.length - 1 ] += text
 					else
-						_ret.h1.push @_trim( text )
+						_ret.h1.push text
 					_h1LastOpen = true
 				else
 					_h1LastOpen = false
@@ -222,7 +228,7 @@ module.exports = class HTMLExtractor
 				return
 
 		# allways us lowertags because tags could be written upper or lowercase
-		, lowerCaseTags: true )
+		, {lowerCaseTags: true, decodeEntities: true } )
 		
 		# push the html to the parser
 		parser.write( html )

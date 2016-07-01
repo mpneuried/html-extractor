@@ -172,13 +172,13 @@ describe 'HTML-dispatch-TEST', ->
 		return
 
 		it "#3 str.replace is not a function when using reduce with list: true", ( done )->
-			_html = '<body><p id="indexable">term one</p><p>non indexable content</p><p id="indexable">term two</p></body>'
+			_html = '<body><p id="indexable">term one</p><p>non indexable content</p><p id="indexable">term&nbsp;&nbsp;&nbsp;two&nbsp;&nbsp;&nbsp;</p></body>'
 			_exp =
 				meta:
 					title: ""
 					description: ""
 					keywords: []
-				body: ["term one", "term two"]
+				body: ["term one", "term   two"]
 				h1: []
 			_reduce =
 				tag: "p"

@@ -6,6 +6,8 @@
 # import external modules
 htmlparser = require("htmlparser2")
 _isEmpty = require('lodash/isEmpty')
+_isString = require('lodash/isString')
+_isArray = require('lodash/isArray')
 
 # export extractor class
 module.exports = class HTMLExtractor
@@ -87,7 +89,12 @@ module.exports = class HTMLExtractor
 			# trim results
 			_ret.meta.title = @_trim( _ret.meta.title ) if _ret.meta?.title?.length
 			_ret.meta.description = @_trim( _ret.meta.description ) if _ret.meta?.description?.length
-			_ret.body = @_trim( _ret.body ) if typeof _ret.body is 'string' && _ret.body?.length
+			if _isString( _ret.body ) and _ret.body.length
+				_ret.body = @_trim( _ret.body )
+			else if _isArray( _ret.body ) and _ret.body.length
+				for listEl, idx in _ret.body when listEl?.length
+					_ret.body[ idx ] = @_trim( listEl )
+				
 			for _h, idx in _ret.h1 when _h?.length
 				_ret.h1[ idx ] = @_trim( _h )
 

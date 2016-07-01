@@ -69,7 +69,7 @@ module.exports =
 		"http://www.internet-seo-blog.de/"
 		"http://www.rene-juenemann.de/"
 		"http://www.blogverdiener.de/"
-		"http://www.smartdoktor.de/"
+		#"http://www.smartdoktor.de/"
 		"http://www.downloadflatrate.com/"
 		#"http://e-sparschwein.de/"
 		#"http://www.guenstig-selberkochen.de/"

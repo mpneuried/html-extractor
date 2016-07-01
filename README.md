@@ -234,6 +234,7 @@ myExtrator.extract( html, reduceToList, function( err, data ){
 ## Release History
 |Version|Date|Description|
 |:--:|:--:|:--|
+|0.2.2|2016-07-1|Fixed trimming when `reduced.list` is active #3. Thanks to [Javier Castro](https://github.com/jacargentina)|
 |0.2.1|2016-06-30|Fixed handling of html entities #1. Thanks to [Javier Castro](https://github.com/jacargentina)|
 |0.2.0|2016-06-20|Added option to return reduced elements as list; Fixed reduced value check for classes; Optimized dev env.|
 |0.1.4|-|Updated and pinned dependencies and optimized tests|

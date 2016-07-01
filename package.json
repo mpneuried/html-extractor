@@ -1,5 +1,5 @@
 {
-  "name": "html-extractor",
+  "name": "@javier.alejandro.castro/html-extractor",
   "description": "Extract meta-data from a html string. It extracts the body, title, meta-tags and first headlines to a object to push them to a search indexer like elastic-search",
   "version": "0.2.1",
   "homepage": "https://github.com/mpneuried/html-extractor",
